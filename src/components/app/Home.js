@@ -6,7 +6,8 @@ class Home extends Component {
   render() { 
     return (
       <div className={styles.home}>
-        <h2>Welcome to the app!</h2>
+        <h2>Landing Page</h2>
+        
       </div>
     );
   }
