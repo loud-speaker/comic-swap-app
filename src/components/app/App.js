@@ -32,7 +32,7 @@ class App extends Component {
               <h1>Comic Swap</h1>
               <Header/>
             </header>
-
+            {checkedAuth &&
             <main>
               <Switch>
                 <Route exact path="/" component={Home}/>
@@ -40,6 +40,7 @@ class App extends Component {
                 <Redirect to="/"/>
               </Switch>
             </main>
+            }
 
             <footer>
               <Footer/>
