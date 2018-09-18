@@ -1,4 +1,4 @@
-
+import { get, post } from './request';
 
 const URL = '/api';
 const AUTH_URL = `${URL}/auth`;

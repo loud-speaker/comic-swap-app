@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-
+import styles from './FormControl.css';
 class FormControl extends PureComponent {
 
   static propTypes = {

@@ -16,7 +16,9 @@ class Auth extends PureComponent {
   };
     
   render() { 
-    const { signin, signup } = this.props;
+    const { signin, signup, user, location } = this.props;
+    const redirect = location.state ? location.state.from : '/';
+    if(user) return <Redirect to={redirect}/>
 
     return (
       <section className={styles.auth}>
@@ -34,7 +36,7 @@ class Auth extends PureComponent {
               <Credentials action="Sign Up" submit={signup}/>
             </div>
           )}/>
-          <Redirect to="/auth/signin"/>
+          <Redirect to="/auth/signup"/>
         </Switch>
       </section>
     );

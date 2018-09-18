@@ -5,7 +5,7 @@ import styles from './credentials.css';
 
 class Credentials extends PureComponent {
 
-  static PropTypes = {
+  static propTypes = {
     submit: PropTypes.func.isRequired,
     action: PropTypes.string.isRequired,
   };
@@ -16,7 +16,7 @@ class Credentials extends PureComponent {
   };
 
   handleChange = ({ target }) => {
-    this.setState({ [target.email]: target.value });
+    this.setState({ [target.name]: target.value });
   };
 
   handleSubmit = e => {
