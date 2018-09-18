@@ -15,6 +15,10 @@
     align-content: center;
   }
 
+  a:visited { 
+    color: #999;
+    }
+
   main {
     margin: 0% 4% 0% 4%;
   }
