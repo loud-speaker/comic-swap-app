@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { loadOneComic } from './actions';
+import { loadOneComic, addComic } from './actions';
 import styles from './ComicResult.css';
 
 class ComicResult extends PureComponent {
@@ -10,9 +10,14 @@ class ComicResult extends PureComponent {
   };
 
   handleAdd = comicId => {
-    const { comic } = this.props;
+    const { comic, loadOneComic, addComic } = this.props;
+    console.log('COMIC in result', comic);
     comicId = comic.comicId;
-    this.props.loadOneComic(comicId);
+    return loadOneComic(comicId)
+      .then(data => {
+        console.log('DATA GOING OUT', data.payload);
+        addComic(data.payload);
+      });
   };
 
   handleWishlist = comicId => {
@@ -36,5 +41,5 @@ class ComicResult extends PureComponent {
 
 export default connect(
   null,
-  { loadOneComic }
+  { loadOneComic, addComic }
 )(ComicResult);

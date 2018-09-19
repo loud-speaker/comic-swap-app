@@ -8,10 +8,10 @@ export default class SearchForm extends PureComponent {
   };
 
   state = {
-    keyword: '',
-    limit: '',
-    dateStart: '',
-    dateEnd: ''
+    keyword: 'X-men',
+    limit: '10',
+    dateStart: '1950-01-01',
+    dateEnd: '2020-01-01'
   };
 
   handleSubmit = event => {
