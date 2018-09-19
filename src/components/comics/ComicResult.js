@@ -11,11 +11,9 @@ class ComicResult extends PureComponent {
 
   handleAdd = comicId => {
     const { comic, loadOneComic, addComic } = this.props;
-    console.log('COMIC in result', comic);
     comicId = comic.comicId;
     return loadOneComic(comicId)
       .then(data => {
-        console.log('DATA GOING OUT', data.payload);
         addComic(data.payload);
       });
   };

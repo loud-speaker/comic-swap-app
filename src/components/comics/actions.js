@@ -16,7 +16,6 @@ export const loadOneComic = (comicId) => {
 };
 
 export const addComic = (comic) => {
-  console.log('GOT TO ACTION');
   return {
     type: COMIC_ADD,
     payload: postComic(comic)
