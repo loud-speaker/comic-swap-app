@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
@@ -26,11 +26,11 @@ class Header extends Component {
         <nav id="nav-ul">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
-              {
-                user
-                  ? <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
-                  : <NavLink to="/auth">Login</NavLink>
+              {user &&
+                <Fragment>
+                  <NavLink to="/">Comics&nbsp;</NavLink>
+                  <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
+                </Fragment>
               }
             </li>
           </ul>
