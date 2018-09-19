@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 // import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
 
 export default class SearchForm extends PureComponent {
   static propTypes = {
@@ -71,9 +72,7 @@ export default class SearchForm extends PureComponent {
             value={dateEnd}
             onChange={this.handleChange}
           />
-
-          <button type="submit">Search</button>
-          
+          <Button variant="contained" color="primary" type="submit">Search</Button>
         </form>
       </div>
     );
