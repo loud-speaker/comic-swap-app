@@ -33,6 +33,8 @@ class Header extends Component {
           }
           &nbsp;
           <NavLink to="/swap">Swap</NavLink>
+          &nbsp;
+          <NavLink to="/me">Dashboard</NavLink>
         </nav>
       </div>
     );
