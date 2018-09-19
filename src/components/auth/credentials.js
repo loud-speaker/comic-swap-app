@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FormControl from '../shared/FormControl';
 
@@ -11,7 +11,10 @@ class Credentials extends PureComponent {
 
   state = {
     email: '',
-    password: ''
+    password: '',
+    zip: '',
+    username: '',
+    avatar: ''
   };
 
   handleChange = ({ target }) => {
@@ -26,7 +29,7 @@ class Credentials extends PureComponent {
   
   render() { 
     const { action } = this.props;
-    const { email, password } = this.state;
+    const { email, password, zip, username, avatar } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit} className={StyleSheet.credentials}>
@@ -37,6 +40,22 @@ class Credentials extends PureComponent {
         <FormControl label="Password">
           <input name="password" type="password" value={password} onChange={this.handleChange} required></input>
         </FormControl>
+
+        {(action === 'Sign Up') &&
+          <Fragment>
+            <FormControl label="Username">
+              <input name="username" type="text" value={username} onChange={this.handleChange} required></input>
+            </FormControl>
+
+            <FormControl label="Avatar">
+              <input name="avatar" type="text" value={avatar} onChange={this.handleChange} required></input>
+            </FormControl>
+
+            <FormControl label="Zip Code">
+              <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
+            </FormControl>
+          </Fragment>
+        }
 
         <FormControl>
           <button>{action}</button>
