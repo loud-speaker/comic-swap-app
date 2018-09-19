@@ -6,7 +6,6 @@ import { loadComics } from './actions';
 
 import SearchForm from './SearchForm';
 import ComicsDisplay from './ComicsDisplay';
-import Loading from '../shared/Loading';
 
 class ComicsList extends PureComponent {
   
@@ -14,19 +13,18 @@ class ComicsList extends PureComponent {
     comics: PropTypes.array,
   };
 
-  handleSearch = () => {
-    this.props.loadComics();
+  handleSearch = (params) => {
+    this.props.loadComics(params);
   };
 
   render() {
     const { comics } = this.props;
-    console.log('COMICS', comics);
     return (
       <div>
         <SearchForm submit={this.handleSearch}/>
-        {comics
-          ? <ComicsDisplay/>
-          : <Loading/>
+        {comics.length > 0
+          ? <ComicsDisplay comics={comics}/>
+          : <p>Search for comics!</p>
         }
       </div>
     );
