@@ -10,6 +10,7 @@ import { getCheckedAuth } from '../auth/reducers';
 
 import Header from './Header';
 import ComicsList from '../comics/ComicsList';
+import Swap from '../swap/Swap';
 import Footer from './Footer';
 
 class App extends Component {
@@ -34,11 +35,13 @@ class App extends Component {
               <h1>Comic Swap</h1>
               <Header/>
             </header>
+
             {checkedAuth &&
             <main>
               <Switch>
                 <PrivateRoute exact path="/" component={ComicsList}/>
                 <Route path="/auth" component={Auth}/>
+                <Route path="/swap" component={Swap}/>
                 <Redirect to="/"/>
               </Switch>
             </main>

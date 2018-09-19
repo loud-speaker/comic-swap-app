@@ -24,16 +24,15 @@ class Header extends Component {
     return (
       <div className={styles.header}>
         <nav id="nav-ul">
-          <ul>
-            <li>
-              {user &&
-                <Fragment>
-                  <NavLink to="/">Comics&nbsp;</NavLink>
-                  <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
-                </Fragment>
-              }
-            </li>
-          </ul>
+          {user &&
+            <Fragment>
+              <NavLink to="/">Comics&nbsp;</NavLink>
+              &nbsp;
+              <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
+            </Fragment>
+          }
+          &nbsp;
+          <NavLink to="/swap">Swap</NavLink>
         </nav>
       </div>
     );
