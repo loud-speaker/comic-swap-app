@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import FormControl from '../shared/FormControl';
-import styles from './credentials.css';
 
 class Credentials extends PureComponent {
 
@@ -20,7 +19,6 @@ class Credentials extends PureComponent {
   };
 
   handleSubmit = e => {
-    console.log('HERE');
     e.preventDefault();
     this.props.submit(this.state)
       .catch(() => {});
@@ -32,11 +30,11 @@ class Credentials extends PureComponent {
 
     return (
       <form onSubmit={this.handleSubmit} className={StyleSheet.credentials}>
-       <FormControl label="email">
+        <FormControl label="Email">
           <input name="email" type="email" value={email} onChange={this.handleChange} required></input>
         </FormControl>
 
-        <FormControl label="password">
+        <FormControl label="Password">
           <input name="password" type="password" value={password} onChange={this.handleChange} required></input>
         </FormControl>
 
@@ -47,4 +45,4 @@ class Credentials extends PureComponent {
     );
   }
 }
- export default Credentials;
+export default Credentials;

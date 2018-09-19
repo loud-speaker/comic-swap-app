@@ -2,13 +2,15 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Header from './Header';
-import Home from './Home';
-import Footer from './Footer';
+import PrivateRoute from './PrivateRoute';
 import Auth from '../auth/auth';
 import styles from './App.css';
 import { tryLoadUser } from '../auth/actions';
 import { getCheckedAuth } from '../auth/reducers';
+
+import Header from './Header';
+import ComicsList from '../comics/ComicsList';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -35,7 +37,7 @@ class App extends Component {
             {checkedAuth &&
             <main>
               <Switch>
-                <Route exact path="/" component={Home}/>
+                <PrivateRoute exact path="/" component={ComicsList}/>
                 <Route path="/auth" component={Auth}/>
                 <Redirect to="/"/>
               </Switch>
