@@ -1,7 +1,7 @@
 :local(.app) {
 
   h1 {
-    color: white;
+    color: black;
   }
   
   header {
@@ -30,7 +30,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      background-color: #2B4353;
+      background-color: #FFF;
     }
   
   }

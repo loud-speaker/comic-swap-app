@@ -7,6 +7,8 @@ class Credentials extends PureComponent {
   static propTypes = {
     submit: PropTypes.func.isRequired,
     action: PropTypes.string.isRequired,
+    signin: PropTypes.func.isRequired,
+    signup: PropTypes.func.isRequired
   };
 
   state = {
@@ -41,6 +43,9 @@ class Credentials extends PureComponent {
           <input name="password" type="password" value={password} onChange={this.handleChange} required></input>
         </FormControl>
 
+
+        
+
         {(action === 'Sign Up') &&
           <Fragment>
             <FormControl label="Username">
@@ -56,6 +61,7 @@ class Credentials extends PureComponent {
             </FormControl>
           </Fragment>
         }
+
 
         <FormControl>
           <button>{action}</button>

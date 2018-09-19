@@ -9,6 +9,7 @@ class ComicResult extends PureComponent {
     comic: PropTypes.object.isRequired
   };
 
+
   handleAdd = comicId => {
     const { comic, loadOneComic, addComic } = this.props;
     comicId = comic.comicId;
@@ -29,6 +30,7 @@ class ComicResult extends PureComponent {
         <img src={comic.image}/>
         <p>Title: {comic.name}</p>
         <p>Cover Date: {comic.coverDate}</p>
+
         <p>(#{comic.comicId})</p>
         <button onClick={this.handleAdd}>Add</button>
         <button onClick={this.handleWishlist}>Wishlist</button>
@@ -36,6 +38,7 @@ class ComicResult extends PureComponent {
     );
   }
 }
+
 
 export default connect(
   null,
