@@ -9,6 +9,7 @@ import { tryLoadUser } from '../auth/actions';
 import { getCheckedAuth } from '../auth/reducers';
 
 import Header from './Header';
+import About from '../about/About';
 import ComicsList from '../comics/ComicsList';
 import Swap from '../swap/Swap';
 import Dashboard from '../dashboard/Dashboard';
@@ -41,6 +42,7 @@ class App extends Component {
             <main>
               <Switch>
                 <PrivateRoute exact path="/" component={ComicsList}/>
+                <Route path="/about" component={About}/>
                 <Route path="/auth" component={Auth}/>
                 <Route path="/swap" component={Swap}/>
                 <Route path="/me" component={Dashboard}/>

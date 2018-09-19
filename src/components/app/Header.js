@@ -29,12 +29,14 @@ class Header extends Component {
               <NavLink to="/">Comics&nbsp;</NavLink>
               &nbsp;
               <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
+              &nbsp;
+              <NavLink to="/swap">Swap</NavLink>
+              &nbsp;
+              <NavLink to="/me">Dashboard</NavLink>
             </Fragment>
           }
           &nbsp;
-          <NavLink to="/swap">Swap</NavLink>
-          &nbsp;
-          <NavLink to="/me">Dashboard</NavLink>
+          <NavLink to="/about">About</NavLink>
         </nav>
       </div>
     );
