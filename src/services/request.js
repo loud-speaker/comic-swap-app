@@ -31,7 +31,6 @@ function request(url, options = {}, data) {
   if(options.method === 'GET' && data) {
     let searchParams = '?' + Object.keys(data).map(key => `${key}=${data[key]}`).join('&');
     url += searchParams;
-    console.log('ANDREW BODEY', url);
   } else if(data) {
     options.body = JSON.stringify(data);
   }
@@ -39,10 +38,8 @@ function request(url, options = {}, data) {
     if(!options.headers) options.headers = {};
     options.headers.Authorization = token;
   }
-  console.log('ZZZZZZZ OPTIONS BODY', options.body);
   return fetch(url, options)
     .then(response => {
-      console.log('OPTIONS BODY', options.body);
       return [response.ok, response.json()];
     })
     .then(([ok, json]) => {
