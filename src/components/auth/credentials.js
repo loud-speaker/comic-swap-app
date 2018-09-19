@@ -7,6 +7,8 @@ class Credentials extends PureComponent {
   static propTypes = {
     submit: PropTypes.func.isRequired,
     action: PropTypes.string.isRequired,
+    signin: PropTypes.func.isRequired,
+    signup: PropTypes.func.isRequired
   };
 
   state = {
@@ -38,6 +40,14 @@ class Credentials extends PureComponent {
           <input name="password" type="password" value={password} onChange={this.handleChange} required></input>
         </FormControl>
 
+        <FormControl label="Create Username">
+          <input className="toggle" name="username" type="username" value={''} onChange={this.handleChange} required></input>
+        </FormControl>
+
+        <FormControl label="Your Zipcode">
+          <input className="toggle" name="zipcode" type="number" value={Number} onChange={this.handleChange} required></input>
+        </FormControl>
+        
         <FormControl>
           <button>{action}</button>
         </FormControl>
