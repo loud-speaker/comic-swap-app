@@ -1,73 +1,40 @@
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { loadOneComic } from './actions';
+import styles from './ComicResult.css';
 
-// import React, { PureComponent } from 'react';
-// import PropTypes from 'prop-types';
-// import styles from './ComicResult.css';
-// import { withStyles } from '@material-ui/core/styles';
-// import Card from '@material-ui/core/Card';
-// import CardActionArea from '@material-ui/core/CardActionArea';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import Button from '@material-ui/core/Button';
-// import Typography from '@material-ui/core/Typography';
+class ComicResult extends PureComponent {
+  static propTypes = {
+    comic: PropTypes.object.isRequired
+  };
 
-// const styles = {
-//   card: {
-//     maxWidth: 345,
-//   },
-//   media: {
-//     objectFit: 'cover',
-//   },
-// };
+  handleAdd = comicId => {
+    const { comic } = this.props;
+    comicId = comic.comicId;
+    this.props.loadOneComic(comicId);
+  };
 
+  handleWishlist = comicId => {
+    console.log('TO-DO: WRITE FUNCTION');
+  };
 
-// export default class ComicResult extends PureComponent {
-//   static propTypes = {
-//     comic: PropTypes.object.isRequired
-//   };
+  render() {
+    const { comic } = this.props;
+    return (
+      <div className={styles.comic}>
+        <img src={comic.image}/>
+        <p>Title: {comic.name}</p>
+        <p>Cover Date: {comic.coverDate}</p>
+        <p>(#{comic.comicId})</p>
+        <button onClick={this.handleAdd}>Add</button>
+        <button onClick={this.handleWishlist}>Wishlist</button>
+      </div>
+    );
+  }
+}
 
-//   render() {
-//     const { comic, classes } = this.props;
-//     return (
-//       <Fragment>
-
-
-//       <Card className={classes.card}>
-//         <CardActionArea>
-//           <CardMedia
-//             component="img"
-//             className={classes.media}
-//             height="140"
-//             image={comic.image}
-//             title={comic.name}
-//           />
-//           <CardContent>
-//             <Typography gutterBottom variant="headline" component="h2">
-//               {comic.name}
-//             </Typography>
-//             <Typography component="p">
-//               {comic.coverDate}
-//             </Typography>
-//           </CardContent>
-//         </CardActionArea>
-//         <CardActions>
-//         <Button size="small" color="primary">
-//           Add
-//         </Button>
-//         <Button size="small" color="primary">
-//           Wish
-//         </Button>
-//       </CardActions>
-      
-      
-//       </Card>
-//       <div className={styles.comic}>
-//         <img src={comic.image}/>
-//         <p>Title: {comic.name}</p>
-//         <p>Cover Date: {comic.coverDate}</p>
-//         <p></p>
-//       </div>
-//       </Fragment>
-//     );
-//   }
-// }
+export default connect(
+  null,
+  { loadOneComic }
+)(ComicResult);
