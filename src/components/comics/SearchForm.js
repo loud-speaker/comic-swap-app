@@ -15,7 +15,6 @@ export default class SearchForm extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('STATE', this.state);
     this.props.submit(this.state);
   };
 
