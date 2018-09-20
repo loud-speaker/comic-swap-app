@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { loadOneComic, addComic, addCatalog } from './actions';
+import { loadOneComic, addComic } from './actions';
 import { getUser } from '../auth/reducers';
 import styles from './ComicResult.css';
 
@@ -15,7 +15,6 @@ class ComicResult extends PureComponent {
   handleAdd = comicId => {
     const { user, comic, loadOneComic, addComic } = this.props;
     comicId = comic.comicId;
-    // const catalog = { userId: user._id, comicId: comic._id, condition: 'Unknown' };
     return loadOneComic(comicId)
       .then(data => {
         data.payload.user = user._id;
@@ -56,5 +55,5 @@ export default connect(
   state => ({
     user: getUser(state)
   }),
-  { loadOneComic, addComic, addCatalog }
+  { loadOneComic, addComic }
 )(ComicResult);
