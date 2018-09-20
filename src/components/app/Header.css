@@ -1,13 +1,19 @@
 :local(.header) {
+  @import url('https://fonts.googleapis.com/css?family=Bangers');
+
   display: flex;
   font-family: Helvetica, sans-serif;
   justify-content: center;
   box-shadow: 0 8px 6px -6px black;
 
+  h1 {
+    font-family: 'Bangers', sans-serif;
+  }
+
   nav {
     display: flex;
     justify-content: row;
-    align-items: end;
+ align-items: end;
   }
   
   ul {
