@@ -1,23 +1,65 @@
+// font-family: 'Bangers', sans-serif;
+// font-family: 'Architects Daughter', sans-serif;
+
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin: 0px;
-  color: white;
-  background-color: #2c3e50;
+  color: black;
+  background-color: white; 
+}
+
+.devonly {
+  color: fuchsia;
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   body {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     margin: 0px;
-    color: #2c3e50;
+    color: black;
     background-color: white; 
+  }
+
+  h1 {
+    font-family: "Bangers", sans-serif;
+    font-size: 30px;
+  }
+
+  h2 {
+    font-family: "Architects Daughter", sans-serif;
+  }
+
+  button {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 100px;
+    cursor: pointer;
+    padding: 9px 0px;
+    overflow: hidden;
+    border: 1px solid;
+    font: normal 19px/1 "Bangers", Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: #ffffff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8) ;
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8) ;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  }
+  
+  button:active {
+    margin: 3px 0 0 3px;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.8) ;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.8) ;
   }
 
 }

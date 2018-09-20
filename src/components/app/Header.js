@@ -1,27 +1,52 @@
-import React, { Component } from 'react';
-import styles from './Header.css';
+import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getUser } from '../auth/reducers';
+import { logout } from '../auth/actions';
+import PropTypes from 'prop-types';
+
+import styles from './Header.css';
 
 class Header extends Component {
 
+  static propTypes = {
+    user: PropTypes.object,
+    logout: PropTypes.func.isRequired
+  };
+
+  handleLogout = () => {
+    this.props.logout();
+  };
+
   render() {
+    const { user } = this.props;
 
     return (
       <div className={styles.header}>
+      <h1>Comic Swap</h1>
         <nav id="nav-ul">
-          <ul>
-            <li>
-              <NavLink
-                to="/"
-                style={{ color: '#2c3e50', textDecoration: 'none', fontWeight: 'bold' }} 
-                exact activeStyle={{ color: 'white', borderBottom: '2px solid #F4F9F4', fontWeight: 'bold' }}
-              >Home</NavLink>
-            </li>
-          </ul>
+          {user &&
+            <Fragment>
+              <NavLink to="/">Comics&nbsp;</NavLink>
+              &nbsp;
+              <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
+              &nbsp;
+              <NavLink to="/swap">Swap</NavLink>
+              &nbsp;
+              <NavLink to="/me">Dashboard</NavLink>
+            </Fragment>
+          }
+          &nbsp;
+          <NavLink to="/about">About</NavLink>
         </nav>
       </div>
     );
   }
 }
 
-export default Header;
+export default connect(
+  state => ({
+    user: getUser(state)
+  }),
+  { logout }
+)(Header);
