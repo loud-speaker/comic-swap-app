@@ -1,3 +1,107 @@
 :local(.comic) {
 
+
+
+  // img {
+  //   max-height: 200px;
+  //   padding: 10px;
+  // }
+
+  button {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 120px;
+    cursor: pointer;
+    padding: 9px 20px;
+    overflow: hidden;
+    border: 1px solid;
+    font: normal 20px/1 "Bangers", Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: #ffffff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8) ;
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8) ;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  }
+  
+  button:active {
+    margin: 3px 0 0 3px;
+    -webkit-box-shadow: 1px 1px 1px 0 rgb(230, 183, 95, 0.8);
+    box-shadow: 1px 1px 1px 0 rgb(230, 183, 95, 0.8);
+  }
+  
+  *,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  color: #444;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2,
+p {
+  margin: 0 0 1em 0;
+}
+
+.media {
+  margin-bottom: 2em;
+  border: 2px solid #A9EDF3;
+  padding: 10px;
+}
+
+.media > .title { grid-area: title; }
+.media > .img { grid-area: img; }
+.media > .details { grid-area: bd; }
+.media > .footer { grid-area: ft; }
+
+.media {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-areas:
+    "title"
+    "img"
+    "bd"
+    "ft";
+}
+
+
+// @media (min-width: 600px) {
+
+//   /* clearfix*/
+//   .media:after {
+//     content: "";
+//     display: block;
+//     clear: both;
+//   }
+
+//   .media > .media {
+//     margin-left: 160px;
+//     clear: both;
+//   }
+
+//   .media .cover {
+//     float: left;
+//     margin: 0 10px 0 0;
+//     width: 150px;
+//   }
+  
+//   .media .footer {
+//     background-color: #eee;
+//     padding: 10px;
+//   }
+
+
+
 }

@@ -27,14 +27,22 @@ class ComicResult extends PureComponent {
     const { comic } = this.props;
     return (
       <div className={styles.comic}>
-        <img src={comic.image}/>
-        <p>Title: {comic.name}</p>
-        <p>Cover Date: {comic.coverDate}</p>
+        <div className="media">
+          <div className="cover">
+            <img src={comic.image}/>
+          </div>
+          <h2 className="title">Title: {comic.name}</h2>
+          <p className="details">Cover Date: {comic.coverDate}</p>
+          <div className="footer">
+            <button onClick={this.handleAdd}>Add To Collection</button>
+            <button onClick={this.handleWishlist}>Wishlist</button>
+          </div>
 
-        <p>(#{comic.comicId})</p>
-        <button onClick={this.handleAdd}>Add</button>
-        <button onClick={this.handleWishlist}>Wishlist</button>
+          <p className="devonly">(#{comic.comicId})</p>
+        
+        </div>
       </div>
+
     );
   }
 }

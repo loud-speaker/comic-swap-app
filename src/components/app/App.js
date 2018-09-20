@@ -32,11 +32,10 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <div className={styles.app}>
-            <header>
-              <h1>Comic Swap</h1>
-              <Header/>
-            </header>
+          <div className={styles.app}>  
+          <header>
+            <Header/>
+          </header>            
 
             {checkedAuth &&
             <main>
