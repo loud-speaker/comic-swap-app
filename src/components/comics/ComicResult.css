@@ -1,12 +1,14 @@
 :local(.comic) {
+  @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers');
 
   button {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    width: 140px;
+    width: 110px;
     cursor: pointer;
     padding: 9px 20px;
+    margin: 0 10px 0 10px;
     overflow: hidden;
     border: 1px solid;
     font: normal 20px/1 "Bangers", Helvetica, sans-serif;
@@ -22,8 +24,8 @@
   
   button:active {
     margin: 3px 0 0 3px;
-    -webkit-box-shadow: 1px 1px 1px 0 rgb(230, 183, 95, 0.8);
-    box-shadow: 1px 1px 1px 0 rgb(230, 183, 95, 0.8);
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
   }
 
   *,
@@ -33,26 +35,35 @@
 }
 
 body {
-  margin: 40px;
-  font-family: 'Open Sans', 'sans-serif';
-  background-color: #fff;
-  color: #444;
+  margin: 10px;
+  background-color: #ebebeb;
 }
 
 img {
-  max-width: 100%;
+  margin: 10px, 0 0 0;
+  height: 100%;
+  width: 100%;
 }
 
-h1,
+h2 {
+  font-family: "Architects Daughter", sans-serif;
+  font-size: 22px;
+  color: black;
+  margin: 0 0 1em 0;
+  text-align: left;
+}
+
+
 p {
+  
   margin: 0 0 1em 0;
 }
 
 .media {
   margin-bottom: 2em;
-  border: 2px solid #444;
   padding: 10px;
   max-width: 600px;
+  background-color: #ebebeb;
 }
 
 .media > .title { grid-area: title; }
@@ -62,7 +73,7 @@ p {
 
 .media {
   display: grid;
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   grid-template-areas:
     "title"
     "img"
@@ -81,23 +92,23 @@ p {
   }
 
   .media > .media {
-    margin-left: 160px;
+    margin-left: 0;
     clear: both;
   }
 
   .media .img {
-    float: left;
-    margin: 0 10px 0 0;
-    width: 150px;
+    margin: 0 0 0 10px;
+    width: 100%;
   }
   
   .media .footer {
     background-color: #CE7840;
-    padding: 10px;
+    padding: 20px;
   }
 
   .media > * {
-    margin: 0 0 0 160px;
+    margin: 0px;
+    
   }
 
   @supports(display: grid ) {
@@ -115,18 +126,18 @@ p {
 
     .media {
       display: grid;
-      grid-column-gap: 20px;
-      grid-template-columns: 150px 3fr;
+      grid-column-gap: 10px;
+      grid-template-columns: 180px 3fr;
       grid-template-rows: auto 1fr auto;
       grid-template-areas:
         "img title"
         "img bd"
-        "ft ft";
+        "img ft";
     }
 
     /* nested */
     .media > .media {
-      grid-column: 2 / -1 ;
+      grid-column: 1 / -1 ;
       margin: 0; /* override */
       margin-top: 1em;
     }
