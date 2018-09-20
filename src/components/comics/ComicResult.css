@@ -52,6 +52,7 @@ p {
   margin-bottom: 2em;
   border: 2px solid #444;
   padding: 10px;
+  max-width: 600px;
 }
 
 .media > .title { grid-area: title; }
@@ -91,7 +92,7 @@ p {
   }
   
   .media .footer {
-    background-color: #eee;
+    background-color: #CE7840;
     padding: 10px;
   }
 
@@ -133,6 +134,113 @@ p {
 
 
 }
+
+.footer {  
+  /*
+    size progressively decreasing 
+  */
+    background-image:
+      radial-gradient(
+        circle,
+        #AE3728 85%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 80%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 75%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 70%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 65%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 60%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 55%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 50%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 45%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 40%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 35%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 30%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 25%,
+        transparent 0
+        ),
+      radial-gradient(
+        circle,
+        #AE3728 20%,
+        transparent 0
+        );  
+   
+  /*
+    change all other values when changing this.
+    I suppose this'd be easier to do in Sass.
+  */
+    background-size: 1em 1em;
+    
+  /*
+    If you want a vertical pattern change to repeat-x, also remember to  switch the background-positions' values. Eg. "2em 0" becomes "0 2em".
+  */
+    background-repeat: repeat-x;
+    
+  /*
+    based on background-size value
+  */
+    background-position:
+      0 0, 
+      0 1em, 
+      0 2em, 
+      0 3em, 
+      0 4em, 
+      0 5em, 
+      0 6em,
+      0 7em,
+      0 8em,
+      0 9em,
+      0 10em,
+      0 11em,
+      0 12em,
+      0 13em;
+    }
 
  
 
