@@ -7,7 +7,7 @@ class Footer extends Component {
 
     return (
       <footer className={styles.footer}>
-        <div class="halftone">
+        <div className="halftone">
         <img src="https://placebear.com/100/100.jpg"/>
         </div>
         

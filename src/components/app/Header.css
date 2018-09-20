@@ -1,13 +1,13 @@
 :local(.header) {
-
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, sans-serif;
   justify-content: center;
+  box-shadow: 0 8px 6px -6px black;
 
   nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: row;
+    align-items: end;
   }
   
   ul {
@@ -19,8 +19,9 @@
     justify-content: space-around;
   }
 
-  a:visited { 
-  color: #999;
+  a {
+    color: #CE7840;
   }
+
 
 }
