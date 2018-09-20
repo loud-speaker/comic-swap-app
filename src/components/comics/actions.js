@@ -1,5 +1,5 @@
-import { COMICS_LOAD, COMIC_LOAD, COMIC_ADD } from './reducers';
-import { getComicsList, getComicDetail, postComic } from '../../services/comicsApi';
+import { COMICS_LOAD, COMIC_LOAD, COMIC_ADD, CATALOG_ADD } from './reducers';
+import { getComicsList, getComicDetail, postComic, postCatalog } from '../../services/comicsApi';
 
 export const loadComics = (params) => {
   return {
@@ -19,5 +19,12 @@ export const addComic = (comic) => {
   return {
     type: COMIC_ADD,
     payload: postComic(comic)
+  };
+};
+
+export const addCatalog = (catalog) => {
+  return {
+    type: CATALOG_ADD,
+    payload: postCatalog(catalog)
   };
 };
