@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CatalogDisplay from './CatalogDisplay';
 import { getUserCatalog } from './reducers';
+import { getUser } from '../auth/reducers';
 import { loadUserCatalog } from './actions';
 
 class Dashboard extends Component {
@@ -16,11 +17,12 @@ class Dashboard extends Component {
   }
   
   render() { 
-    const { catalog } = this.props;
+    const { catalog, user } = this.props;
     
     return (
       <section>
-        <h3>User Dashboard Component</h3>
+        <h3>{user.username}&apos;s Collection</h3>
+        <img src={user.avatar}/>
         <CatalogDisplay
           catalog={catalog}
         />
@@ -31,6 +33,7 @@ class Dashboard extends Component {
  
 export default connect(
   state => ({
+    user: getUser(state),
     catalog: getUserCatalog(state)
   }),
   { loadUserCatalog }

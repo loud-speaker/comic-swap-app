@@ -21,11 +21,7 @@ class ComicResult extends PureComponent {
         addComic(data.payload);
       });
   };
-
-  handleWishlist = comicId => {
-    console.log('TO-DO: WRITE FUNCTION');
-  };
-
+  
   render() {
     const { comic } = this.props;
     return (
