@@ -1,5 +1,4 @@
 import { own, trade, wishlist, good, fine, mint } from '../../assets/constants';
-
 import React, { PureComponent } from 'react';
 import styles from './CatalogItemForm.css';
 import PropTypes from 'prop-types';
@@ -7,14 +6,25 @@ import PropTypes from 'prop-types';
 export default class CatalogItemForm extends PureComponent {
 
     state = {
+      _id: '',
+      user: '',
+      comic: '',
       condition: '',
       exchange: ''
     };
-  
+
     static propTypes = {
       submit: PropTypes.func,
       onCancel: PropTypes.func,
+      catalogItem: PropTypes.object,
     };
+    
+    componentDidMount() {
+      const { catalogItem } = this.props;
+      if(!catalogItem) return;
+
+      this.setState(catalogItem);
+    }
 
     handleSubmit = event => {
       event.preventDefault();
@@ -31,6 +41,7 @@ export default class CatalogItemForm extends PureComponent {
     };
 
     render() {
+
       return (
         <form onSubmit={this.handleSubmit} className={styles.catalogItemForm}>
           <input onChange={this.handleChange} id="good" type="radio" name="condition" value="Good" className="input-hidden"></input>
