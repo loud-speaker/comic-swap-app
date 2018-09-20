@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FormControl from '../shared/FormControl';
+import { avatar1, avatar2 } from '../../assets/collection';
 
 class Credentials extends PureComponent {
 
@@ -48,11 +49,12 @@ class Credentials extends PureComponent {
             </FormControl>
 
             <FormControl label="Avatar">
-              <input name="avatar" type="text" value={avatar} onChange={this.handleChange} required></input>
+              <input name="avatar1" type="radio" value={avatar1} onChange={this.handleChange} required></input>
+               
             </FormControl>
 
             <FormControl label="Zip Code">
-              <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
+              <input className="avatar" name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
             </FormControl>
           </Fragment>
         }
