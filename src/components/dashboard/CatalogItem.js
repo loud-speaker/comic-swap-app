@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './CatalogItem.css';
+import CatalogItemForm from './CatalogItemForm';
 
 class CatalogItem extends Component {
 
   static propTypes = {
     catalogItem: PropTypes.object,
+    editCatalog: PropTypes.func,
   };
   
+  state = {
+    editing: false
+  };
+
+  handleEdit = catalog => {
+    const { editCatalog } = this.props;
+    return editCatalog(catalog)
+      .then(() => this.toggleEdit);
+  };
+
+  toggleEdit = () => {
+    this.setState(({ editing }) => ({ editing: !editing }));
+  };
   
   render() { 
     const { catalogItem } = this.props;
-    console.log(catalogItem);
+    const { editing } = this.state;
     
     return (
       <section className={styles.catalogItem}>
@@ -20,6 +35,10 @@ class CatalogItem extends Component {
         <p>Issue: {catalogItem.comic.issueName}</p>
         <p>Cover Date: {catalogItem.comic.coverDate}</p>
         <p>Volume: {catalogItem.comic.volumeName}</p>
+        {editing
+          ? <CatalogItemForm submit={this.handleEdit} onCancel={this.toggleEdit}/>
+          : <button onClick={this.toggleEdit}>Edit</button>
+        }
         <p>Condition: {catalogItem.condition}</p>
         <div dangerouslySetInnerHTML={{ __html: catalogItem.comic.description }}></div>
         Characters:

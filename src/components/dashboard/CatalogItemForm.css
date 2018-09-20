@@ -1,0 +1,21 @@
+:local(.catalogItemForm) {
+    .input-hidden {
+        position: absolute;
+        left: -9999px;
+    }
+    
+    img {
+        width: 100px;
+        margin: 3px;
+    }
+
+    input {
+      box-sizing: border-box;
+    }
+
+    input[type="radio"]:checked+label {
+        img {
+            border: 1px solid black;
+        } 
+    }
+}
