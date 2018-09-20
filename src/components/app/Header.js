@@ -23,6 +23,7 @@ class Header extends Component {
 
     return (
       <div className={styles.header}>
+      <h1>Comic Swap</h1>
         <nav id="nav-ul">
           {user &&
             <Fragment>

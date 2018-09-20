@@ -1,22 +1,19 @@
 :local(.app) {
 
   h1 {
-    color: black;
+    color: #AE3728;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    font-size: 60px;
   }
   
   header {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  nav-ul {
-    align-content: center;
   }
 
   a:visited { 
-    color: #999;
+    color: #E6B75F;
     }
 
   main {

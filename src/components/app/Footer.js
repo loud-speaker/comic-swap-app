@@ -10,7 +10,6 @@ class Footer extends Component {
         <div className="halftone">
           <img src="https://placebear.com/100/100.jpg"/>
         </div>
-        
       </footer>
     );
   }
