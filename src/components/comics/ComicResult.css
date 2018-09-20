@@ -1,6 +1,39 @@
 :local(.comic) {
   @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers');
 
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 10px;
+    background-color: #ebebeb;
+    align-items: center;
+  }
+  
+  img {
+    margin: 10px, 0 0 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  h2 {
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 26px;
+    color: black;
+    margin: 0 0 1em 0;
+    text-align: left;
+  }
+  
+  
+  p {
+    font-weight: bolder;
+    margin: 0 0 .5em 0;
+  }
+  
   button {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -27,43 +60,12 @@
     -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
     box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
   }
-
-  *,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 10px;
-  background-color: #ebebeb;
-}
-
-img {
-  margin: 10px, 0 0 0;
-  height: 100%;
-  width: 100%;
-}
-
-h2 {
-  font-family: "Architects Daughter", sans-serif;
-  font-size: 22px;
-  color: black;
-  margin: 0 0 1em 0;
-  text-align: left;
-}
-
-
-p {
-  
-  margin: 0 0 1em 0;
-}
-
 .media {
   margin-bottom: 2em;
   padding: 10px;
   max-width: 600px;
-  background-color: #ebebeb;
+  background-color: white;
+  box-shadow: 6px 8px 6px -6px black;
 }
 
 .media > .title { grid-area: title; }
