@@ -37,7 +37,6 @@ class ComicResult extends PureComponent {
           </div>
           <div className="footer">
             <button onClick={this.handleAdd}>➕ Collection</button>
-            <button onClick={this.handleWishlist}>➕ Wishlist</button>
           </div>
         </div>
       </div>
