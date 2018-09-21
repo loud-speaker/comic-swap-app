@@ -27,12 +27,13 @@ export default class SearchForm extends PureComponent {
     const { keyword, dateStart, dateEnd } = this.state;
     return (
       <div className={styles.SearchForm}>
-        <div className="form-container">
         
-          <form onSubmit={event => this.handleSubmit(event)}>
+          <form className="searchForm" onSubmit={event => this.handleSubmit(event)}>
+          <filedset>
+
             <label>
-            Keyword Search
-              <input
+            <h4>Keyword Search</h4>
+              <input id="keywordInput"
                 type="text"
                 label="Keyword Search"
                 name="keyword"
@@ -42,7 +43,7 @@ export default class SearchForm extends PureComponent {
               />
             </label>
             <label>
-            Results
+            <h4>Results</h4>
               <input
                 type="radio"
                 label="Limit Results"
@@ -66,7 +67,7 @@ export default class SearchForm extends PureComponent {
               />50
             </label>
             <label>
-              Date Range
+              <h4>Date Range</h4>
               <input
                 type="date"
                 label="Start Date"
@@ -82,10 +83,10 @@ export default class SearchForm extends PureComponent {
                 onChange={this.handleChange}
               />
             </label>
+          </filedset>
             <button type="submit">Search</button>
           </form>
         </div>
-      </div>
     );
   }
 }

@@ -1,7 +1,6 @@
-:local(.comic) {
+:local(.searchForm) {
+ 
+background-color: black;
 
-  .form-container {
-    margin: 20px;
-  }
 
 }
