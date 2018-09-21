@@ -38,16 +38,16 @@ class CatalogItem extends PureComponent {
           <button name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-trash-alt fa-2x"></i></button>
           <img src={catalogItem.comic.image}/>
           <div className="user-settings">
-            <button onClick={this.toggleEdit}>Edit</button>
-              {editing
-                ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
-                : <Fragment>
-                    <h2>Condition:</h2>
-                    <p>{catalogItem.condition}</p>
-                    <h2>Status:</h2>
-                    <p>{catalogItem.exchange}</p>
-                  </Fragment> 
-              }
+            {editing
+              ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
+              : <Fragment>
+                <button onClick={this.toggleEdit}>Edit</button>
+                <h2>Condition:</h2>
+                <p>{catalogItem.condition}</p>
+                <h2>Status:</h2>
+                <p>{catalogItem.exchange}</p>
+              </Fragment> 
+            }
           </div>
           <h2>Issue:</h2>
           <p>{catalogItem.comic.issueName}</p>

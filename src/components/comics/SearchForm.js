@@ -28,50 +28,58 @@ export default class SearchForm extends PureComponent {
     return (
       <div>
         <form onSubmit={event => this.handleSubmit(event)}>
-          <input
-            type="text"
-            label="Keyword Search"
-            name="keyword"
-            value={keyword}
-            onChange={this.handleChange}
-            placeholder="Search for keyword"
-          />
-
-          <input
-            type="radio"
-            label="Limit Results"
-            name="limit"
-            value="10"
-            onChange={this.handleChange}
-          />10
-          <input
-            type="radio"
-            label="Limit Results"
-            name="limit"
-            value="20"
-            onChange={this.handleChange}
-          />20
-          <input
-            type="radio"
-            label="Limit Results"
-            name="limit"
-            value="50"
-            onChange={this.handleChange}
-          />50
-          <input
-            type="date"
-            label="Start Date"
-            name="dateStart"
-            value={dateStart}
-            onChange={this.handleChange}
-          />
-          <input
-            type="date"
-            label="End Date"
-            name="dateEnd"
-            value={dateEnd}
-            onChange={this.handleChange}
-          />
+          <label>
+          Keyword Search
+            <input
+              type="text"
+              label="Keyword Search"
+              name="keyword"
+              value={keyword}
+              onChange={this.handleChange}
+              placeholder="Search for keyword"
+            />
+          </label>
+          <label>
+          Results
+            <input
+              type="radio"
+              label="Limit Results"
+              name="limit"
+              value="10"
+              onChange={this.handleChange}
+            />10
+            <input
+              type="radio"
+              label="Limit Results"
+              name="limit"
+              value="20"
+              onChange={this.handleChange}
+            />20
+            <input
+              type="radio"
+              label="Limit Results"
+              name="limit"
+              value="50"
+              onChange={this.handleChange}
+            />50
+          </label>
+          <label>
+            Date Range
+            <input
+              type="date"
+              label="Start Date"
+              name="dateStart"
+              value={dateStart}
+              onChange={this.handleChange}
+            />
+            <input
+              type="date"
+              label="End Date"
+              name="dateEnd"
+              value={dateEnd}
+              onChange={this.handleChange}
+            />
+          </label>
           <button type="submit">Search</button>
         </form>
       </div>
