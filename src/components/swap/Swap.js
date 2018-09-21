@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CollectorBrowse from './CollectorBrowse';
+import Matches from './Matches';
 
 class Swap extends Component {
   
@@ -8,7 +8,16 @@ class Swap extends Component {
     return (
       <section>
         <h3>Swap Component</h3>
-        <CollectorBrowse />
+
+        <div>
+          User
+
+        </div>
+
+        <div>
+          Matches
+          <Matches />
+        </div>
       </section>
     );
   }
