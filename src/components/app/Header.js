@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Sidebar from './Sidebar';
 
 import styles from './Header.css';
-//git comment for push
+
 class Header extends Component {
 
   static propTypes = {
@@ -23,10 +23,13 @@ class Header extends Component {
     const { user } = this.props;
 
     return (
-      <div className={styles.header}>
-      <h1>Comic Swap</h1>
-      <Sidebar/>
-      </div>
+      <Fragment>
+        <div className={styles.header}>
+         <h1>Comic Swap</h1>
+          <button><NavLink to="/" onClick={this.handleLogout}>Logout</NavLink></button>
+          <Sidebar/>
+        </div>
+      </Fragment>
     );
   }
 }
