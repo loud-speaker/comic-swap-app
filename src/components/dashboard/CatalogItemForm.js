@@ -60,24 +60,26 @@ export default class CatalogItemForm extends PureComponent {
               <img src={mint} className="condition" alt="Condition: Mint"/>
               </label>
             </div>
-          
-          <input onChange={this.handleChange} id="own" type="radio" name="exchange" value="Own" className="input-hidden"></input>
-          <label htmlFor="own">
-            <img src={own} className="exchange" alt="Exchange Status: Own"/>
-          </label>
 
-          <input onChange={this.handleChange} id="trade" type="radio" name="exchange" value="Trade" className="input-hidden"></input>
-          <label htmlFor="trade">
-            <img src={trade} className="exchange" alt="Exchange Status: Trade"/>
-          </label>
+            <div className="status">
+              <input onChange={this.handleChange} id="own" type="radio" name="exchange" value="Own" className="input-hidden"></input>
+              <label htmlFor="own">
+                <img src={own} className="exchange" alt="Exchange Status: Own"/>
+              </label>
 
-          <input onChange={this.handleChange} id="wishlist" type="radio" name="exchange" value="Wishlist" className="input-hidden"></input>
-          <label htmlFor="wishlist">
-            <img src={wishlist} className="exchange" alt="Exchange Status: Wishlist"/>
-          </label>
+              <input onChange={this.handleChange} id="trade" type="radio" name="exchange" value="Trade" className="input-hidden"></input>
+              <label htmlFor="trade">
+                <img src={trade} className="exchange" alt="Exchange Status: Trade"/>
+              </label>
 
-          <button>Save</button>
-          <button onClick={this.handleCancel}>Cancel</button>
+              <input onChange={this.handleChange} id="wishlist" type="radio" name="exchange" value="Wishlist" className="input-hidden"></input>
+              <label htmlFor="wishlist">
+                <img src={wishlist} className="exchange" alt="Exchange Status: Wishlist"/>
+              </label>
+
+            </div>
+              <button>Save</button>
+              <button onClick={this.handleCancel}>Cancel</button>
         </form>
       );
     }
