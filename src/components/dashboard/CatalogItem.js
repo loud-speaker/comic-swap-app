@@ -41,11 +41,11 @@ class CatalogItem extends PureComponent {
             {editing
               ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
               : <Fragment>
-                <button onClick={this.toggleEdit}>Edit</button>
+                <button onClick={this.toggleEdit}>Edit Comic</button>
                 <h2>Condition:</h2>
-                <p>{catalogItem.condition}</p>
+                <h3>{catalogItem.condition}</h3>
                 <h2>Status:</h2>
-                <p>{catalogItem.exchange}</p>
+                <h3>{catalogItem.exchange}</h3>
         </Fragment> 
             }
           </div>

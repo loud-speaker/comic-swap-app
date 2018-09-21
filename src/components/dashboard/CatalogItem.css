@@ -27,10 +27,16 @@
         font-family: "Architects Daughter", sans-serif;
         font-size: 22px;
       }
+
+    h3 {
+        font-family: "Helvetica", sans-serif;
+        font-size: 20px;
+        font-weight: 700; 
+      }
     
     p {
         font-family: "Helvetica", sans-serif;
-        font-size: 16px;
+        font-size: 20px;
       }
 
     .user-settings {

@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 80px;
+    background-color: white;
+    border: 10px solid black;
   }
   
   .catalog-header h2 {
