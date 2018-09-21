@@ -18,14 +18,6 @@ render() {
         <ul>
           <li>
             <a href="/">
-              <i className="fas fa-sign-out fa-2x"></i>
-              <span className="nav-text">
-              Home
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="/">
               <i className="fas fa-home fa-2x"></i>
               <span className="nav-text">
               Home
@@ -42,7 +34,7 @@ render() {
           </li>
           <li className="has-subnav">
             <a href="/swap">
-              <i className="fas fa-camera-retro fa-2x"></i>
+              <i className="fas fa-book fa-2x"></i>
               <span className="nav-text">
               Swap
               </span>
