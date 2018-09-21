@@ -1,5 +1,5 @@
 :local(.SearchForm) {
-
+  width: 600px;
   background-color: white;
  
   input, select, textarea {
@@ -20,12 +20,11 @@
   }
 
   .searchBtn {
-    width: 600px;
+    width: 500px;
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 50px;
   }
-
-  
 
 }

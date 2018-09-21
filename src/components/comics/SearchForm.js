@@ -27,8 +27,7 @@ export default class SearchForm extends PureComponent {
     const { keyword, dateStart, dateEnd } = this.state;
     return (
       <div className={styles.SearchForm}>
-        
-          <form onSubmit={event => this.handleSubmit(event)}>
+        <form onSubmit={event => this.handleSubmit(event)}>
           <div>
             <label className="searchFormLabel">Keyword Search:</label>
               <input id="keywordInput"
