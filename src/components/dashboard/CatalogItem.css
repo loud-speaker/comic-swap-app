@@ -8,10 +8,11 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
+        
     }
 
     .comicCover>img {
-        width: 280;
+        max-height: 600px;
     }
     
 

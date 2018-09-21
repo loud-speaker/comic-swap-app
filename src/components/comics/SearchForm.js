@@ -29,8 +29,6 @@ export default class SearchForm extends PureComponent {
       <div className={styles.SearchForm}>
         
           <form className="searchForm" onSubmit={event => this.handleSubmit(event)}>
-          <filedset>
-
             <label>
             <h4>Keyword Search</h4>
               <input id="keywordInput"
@@ -83,7 +81,6 @@ export default class SearchForm extends PureComponent {
                 onChange={this.handleChange}
               />
             </label>
-          </filedset>
             <button type="submit">Search</button>
           </form>
         </div>
