@@ -1,15 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers');
 // font-family: 'Bangers', sans-serif;
 // font-family: 'Architects Daughter', sans-serif;
+// 0 0,
+// 0 1em, 
+// 0 2em, 
+// 0 3em, 
+// 0 4em, 
+// 0 5em, 
+// 0 6em,
+// 0 7em,
+// 0 8em,
+// 0 9em,
+// 0 10em,
+// 0 11em,
+// 0 12em,
+
+$pale-turquoise: #a9edf3;
+$jelly-bean: #487d95;
+$equator: #e6b75f;
+$raw-sienna: #ce7840;
+$tall-poppy: #ae3728;
 
 body {
   font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   margin: 0px;
   color: black;
-  background-color: white; 
+  background-color: #ebebeb; 
 }
 
 .devonly {
@@ -22,10 +40,9 @@ body {
     font-family: Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     margin: 0px;
     color: black;
-    background-color: white; 
+    background-color: #ebebeb; 
   }
 
   h1 {
@@ -35,6 +52,12 @@ body {
 
   h2 {
     font-family: "Architects Daughter", sans-serif;
+    font-size: 22px;
+  }
+
+  p {
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
   }
 
   button {

@@ -8,7 +8,8 @@ class Footer extends Component {
     return (
       <footer className={styles.footer}>
         <div className="halftone">
-          <img src="https://placebear.com/100/100.jpg"/>
+        <p>Comic data courtesy of <a href="https://comicvine.gamespot.com/">Comic Vine</a></p>
+        <p>Avatar illustration by <a href="https://ddianahernandez.com//">Diana Hernandez</a></p>
         </div>
       </footer>
     );

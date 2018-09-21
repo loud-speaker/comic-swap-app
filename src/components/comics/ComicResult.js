@@ -32,13 +32,12 @@ class ComicResult extends PureComponent {
           </div>
           <h2 className="title">{comic.name}</h2>
           <div className="content">
-            <p>Issue: {comic.issueName}</p>
+            <h2>{comic.issueName}</h2>
             <p>Volume: {comic.volumeName}</p>
+            <p>Volume: {comic.coverDate}</p>
           </div>
           <div className="footer">
             <button onClick={this.handleAdd}>➕ Collection</button>
-            <button onClick={this.handleWishlist}>➕ Wishlist</button>
-            <p className="devonly">(#{comic.comicId})</p>
           </div>
         </div>
       </div>

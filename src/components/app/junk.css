@@ -1,104 +1,72 @@
-:local(.footer) {
-
-  color: #FFF;
-  background-color: #131313;
-  padding: 0px;
-  width: 600px;
-  margin: 0 auto;
-
-  * {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    box-sizing: border-box;
-    }
-  
-  html, body {
-    height: 100%;
-    }
-
-    h2 {
-      font-family: "classic-comic", sans-serif;
-    }
-  
-  div {
-    height: 100%;
-    background-color: #222;
-    }
-  
-  .halftone {  
-  /*
-    size progressively decreasing 
-  */
-    background-image:
+background-image:
       radial-gradient(
         circle,
-        white 85%,
+        #ce7840 85%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 80%,
+        #ce7840 80%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 75%,
+        #ce7840 75%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 70%,
+        #ce7840 70%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 65%,
+        #ce7840 65%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 60%,
+        #ce7840 60%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 55%,
+        #ce7840 55%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 50%,
+        #ce7840 50%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 45%,
+        #ce7840 45%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 40%,
+        #ce7840 40%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 35%,
+        #ce7840 35%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 30%,
+        #ce7840 30%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 25%,
+        #ce7840 25%,
         transparent 0
         ),
       radial-gradient(
         circle,
-        white 20%,
+        #ce7840 20%,
         transparent 0
         );  
    
@@ -111,25 +79,25 @@
   /*
     If you want a vertical pattern change to repeat-x, also remember to  switch the background-positions' values. Eg. "2em 0" becomes "0 2em".
   */
-    background-repeat: repeat-y;
+    background-repeat: repeat-x;
     
   /*
     based on background-size value
   */
     background-position:
-      0 0, 
-      1em 0, 
-      2em 0, 
-      3em 0, 
-      4em 0, 
-      5em 0, 
-      6em 0,
-      7em 0,
-      8em 0,
-      9em 0,
-      10em 0,
-      11em 0,
-      12em 0,
-      13em 0;
-    }
-}
+   
+    0 13em,
+    0 12em,
+    0 11em,
+    0 11em,
+    0 10em,
+    0 9em,
+    0 8em,
+    0 7em,
+    0 6em,
+    0 5em,
+    0 4em,
+    0 3em,
+    0 2em,
+    0 1em, 
+    0 0;
