@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUserCatalog } from '../dashboard/reducers';
@@ -6,7 +6,6 @@ import { getUser } from '../auth/reducers';
 // import { loadUserCatalog } from '../dashboard/actions';
 import Matches from './Matches';
 import styles from './Swap.css';
-// user, catalog from store
 
 class Swap extends Component {
 
@@ -25,17 +24,21 @@ class Swap extends Component {
 
     return (
       <section className={styles.swap}>
-        <h3>Swap Component</h3>
+        {user &&
+        <Fragment>
+          <h3>Swap Component</h3>
 
-        <article>
-          <h3>{user.username}&apos;s Matches</h3>
-          <img src={user.avatar}/>
-        </article>
+          <article>
+            <h3>{user.username}&apos;s Matches</h3>
+            <img src={user.avatar}/>
+          </article>
 
-        <article>
-          Matches
-          <Matches />
-        </article>
+          <article>
+            Matches
+            <Matches/>
+          </article>
+        </Fragment>
+        }
       </section>
     );
   }

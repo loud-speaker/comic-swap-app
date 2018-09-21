@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './SearchForm.css';
-
 
 export default class SearchForm extends PureComponent {
   static propTypes = {
-
+    submit: PropTypes.func,
   };
 
   state = {
