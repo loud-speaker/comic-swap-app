@@ -42,11 +42,11 @@ class App extends Component {
             <main>
               <Switch>
                 <PrivateRoute exact path="/" component={ComicsList}/>
-                <Route path="/about" component={About}/>
+                <PrivateRoute path="/about" component={About}/>
                 <Route path="/auth" component={Auth}/>
-                <Route path="/swap" component={Swap}/>
-                <Route path="/me" component={Dashboard}/>
-                <Route path="/map" component={MapResults}/>
+                <PrivateRoute path="/swap" component={Swap}/>
+                <PrivateRoute path="/me" component={Dashboard}/>
+                <PrivateRoute path="/map" component={MapResults}/>
                 <Redirect to="/"/>
               </Switch>
             </main>

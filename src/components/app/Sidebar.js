@@ -3,10 +3,12 @@ import styles from './Sidebar.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../auth/actions';
+import { getUser } from '../auth/reducers';
 class Sidebar extends PureComponent {
 
   static propTypes = {
     logout: PropTypes.func,
+    user: PropTypes.object,
   };
   
   handleLogout = () => {
@@ -14,6 +16,7 @@ class Sidebar extends PureComponent {
   };
 
   render() {
+    const { user } = this.props;
 
     return (
       <header className={styles.sidebar}>
@@ -60,17 +63,16 @@ class Sidebar extends PureComponent {
                 </span>
               </a>
             </li>
-          </ul>
-
-          <ul className="topOfPage">
-            <li onClick={this.handleLogout}>
-              <a>
-                <i className="fa fa-power-off fa-2x"></i>
-                <span className="nav-text">
-              Logout
-                </span>
-              </a>
-            </li>  
+            {user &&
+              <li onClick={this.handleLogout} className="has-subnav">
+                <a>
+                  <i className="fas fa-power-off fa-2x"></i>
+                  <span className="nav-text">
+                Logout
+                  </span>
+                </a>
+              </li>
+            }
           </ul>
         </nav>
       </header>
@@ -79,6 +81,8 @@ class Sidebar extends PureComponent {
 }
 
 export default connect(
-  null,
+  state => ({
+    user: getUser(state)
+  }),
   { logout }
 )(Sidebar);

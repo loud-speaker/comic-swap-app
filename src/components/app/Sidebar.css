@@ -92,6 +92,8 @@
   position:absolute;
   left:0;
   bottom:0;
+  padding-right: 70px;
+  margin-right: 50px;
   cursor: pointer;
   }
 
