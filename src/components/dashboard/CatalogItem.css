@@ -1,12 +1,39 @@
 :local(.catalogItem) {
     @import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
-
-    img {
-        width: 280px;
+    
+    background-color: white;
+    padding: 10px;
+    
+   .comicCover {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
     }
 
-    button i {
+    .comicCover>img {
+        width: 280;
+    }
+    
+
+    #deleteButton {
+    position: absolute;
     color: #ae3728;
+    border: none;
+    box-shadow: none;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    z-index: 10;
+
+    }
+
+    #editButton {
+        font-size: 28px;
+    }
+
+    #editButton:hover {
+        background-color: #ae3728;
     }
 
     h1 {
@@ -18,18 +45,26 @@
         font-family: "Architects Daughter", sans-serif;
         font-size: 22px;
       }
+
+    h3 {
+        font-family: "Helvetica", sans-serif;
+        font-size: 20px;
+        padding-top: 12px; 
+      }
     
     p {
         font-family: "Helvetica", sans-serif;
-        font-size: 16px;
+        font-size: 20px;
       }
 
     .user-settings {
-        background-color: lightgreen;
+        background-color: black;
         display: flex;
         flex-direction: row;
-       justify-content: space-evenly; 
-       margin-top: 10px;
+        justify-content: space-evenly; 
+        margin-top: 10px;
+        color: white;
+        padding: 10px;
     }
 
     

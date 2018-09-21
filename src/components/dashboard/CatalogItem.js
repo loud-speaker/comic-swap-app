@@ -32,21 +32,23 @@ class CatalogItem extends PureComponent {
     const { editing } = this.state;
     
     return (
-      <section className={styles.catalogItem}>
+      <section id="itemContainer" className={styles.catalogItem}>
         {catalogItem.comic.characters &&
         <Fragment>
-          <button name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-trash-alt fa-2x"></i></button>
-          <img src={catalogItem.comic.image}/>
+          <button id="deleteButton" name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-window-close fa-2x"></i></button>
+          <div className="comicCover">
+            <img src={catalogItem.comic.image}/>
+          </div>
           <div className="user-settings">
             {editing
               ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
               : <Fragment>
-                <button onClick={this.toggleEdit}>Edit</button>
+                <button id="editButton" onClick={this.toggleEdit}>Edit Comic</button>
                 <h2>Condition:</h2>
-                <p>{catalogItem.condition}</p>
+                <h3>{catalogItem.condition}</h3>
                 <h2>Status:</h2>
-                <p>{catalogItem.exchange}</p>
-              </Fragment> 
+                <h3>{catalogItem.exchange}</h3>
+        </Fragment> 
             }
           </div>
           <h2>Issue:</h2>

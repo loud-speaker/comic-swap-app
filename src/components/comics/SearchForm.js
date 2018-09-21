@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import styles from './SearchForm.css';
+
 export default class SearchForm extends PureComponent {
   static propTypes = {
     submit: PropTypes.func,
@@ -24,62 +26,65 @@ export default class SearchForm extends PureComponent {
   render() {
     const { keyword, dateStart, dateEnd } = this.state;
     return (
-      <div>
-        <form onSubmit={event => this.handleSubmit(event)}>
-          <label>
-          Keyword Search
-            <input
-              type="text"
-              label="Keyword Search"
-              name="keyword"
-              value={keyword}
-              onChange={this.handleChange}
-              placeholder="Search for keyword"
-            />
-          </label>
-          <label>
-          Results
-            <input
-              type="radio"
-              label="Limit Results"
-              name="limit"
-              value="10"
-              onChange={this.handleChange}
-            />10
-            <input
-              type="radio"
-              label="Limit Results"
-              name="limit"
-              value="20"
-              onChange={this.handleChange}
-            />20
-            <input
-              type="radio"
-              label="Limit Results"
-              name="limit"
-              value="50"
-              onChange={this.handleChange}
-            />50
-          </label>
-          <label>
-            Date Range
-            <input
-              type="date"
-              label="Start Date"
-              name="dateStart"
-              value={dateStart}
-              onChange={this.handleChange}
-            />
-            <input
-              type="date"
-              label="End Date"
-              name="dateEnd"
-              value={dateEnd}
-              onChange={this.handleChange}
-            />
-          </label>
-          <button type="submit">Search</button>
-        </form>
+      <div className={styles.SearchForm}>
+        <div className="form-container">
+        
+          <form onSubmit={event => this.handleSubmit(event)}>
+            <label>
+            Keyword Search
+              <input
+                type="text"
+                label="Keyword Search"
+                name="keyword"
+                value={keyword}
+                onChange={this.handleChange}
+                placeholder="Search for keyword"
+              />
+            </label>
+            <label>
+            Results
+              <input
+                type="radio"
+                label="Limit Results"
+                name="limit"
+                value="10"
+                onChange={this.handleChange}
+              />10
+              <input
+                type="radio"
+                label="Limit Results"
+                name="limit"
+                value="20"
+                onChange={this.handleChange}
+              />20
+              <input
+                type="radio"
+                label="Limit Results"
+                name="limit"
+                value="50"
+                onChange={this.handleChange}
+              />50
+            </label>
+            <label>
+              Date Range
+              <input
+                type="date"
+                label="Start Date"
+                name="dateStart"
+                value={dateStart}
+                onChange={this.handleChange}
+              />
+              <input
+                type="date"
+                label="End Date"
+                name="dateEnd"
+                value={dateEnd}
+                onChange={this.handleChange}
+              />
+            </label>
+            <button type="submit">Search</button>
+          </form>
+        </div>
       </div>
     );
   }

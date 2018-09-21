@@ -34,6 +34,7 @@ class ComicResult extends PureComponent {
           <div className="content">
             <h2>{comic.issueName}</h2>
             <p>Volume: {comic.volumeName}</p>
+            <p>Volume: {comic.coverDate}</p>
           </div>
           <div className="footer">
             <button onClick={this.handleAdd}>➕ Collection</button>
