@@ -32,7 +32,7 @@ class Credentials extends PureComponent {
   
   render() { 
     const { action } = this.props;
-    const { email, password, zip, username, avatar } = this.state;
+    const { email, password, zip, username } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit} className={styles.credentials}>

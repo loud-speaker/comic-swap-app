@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Sidebar.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -24,47 +25,47 @@ class Sidebar extends PureComponent {
         <nav className="main-menu">
           <ul>
             <li className="has-subnav">
-              <a href="/me">
+              <Link to="/me">
                 <i className="fas fa-home fa-2x"></i>
                 <span className="nav-text">
               Dashboard
                 </span>
-              </a>      
+              </Link>      
             </li>
             {user &&
             <Fragment>
               <li>
-                <a href="/">
+                <Link to="/">
                   <i className="fas fa-search fa-2x"></i>
                   <span className="nav-text">
               Search
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="has-subnav">
-                <a href="/swap">
+                <Link to="/swap">
                   <i className="fas fa-book fa-2x"></i>
                   <span className="nav-text">
               Swap
                   </span>
-                </a>      
+                </Link>      
               </li>
               <li className="has-subnav">
-                <a href="/map">
+                <Link to="/map">
                   <i className="fas fa-map-marker-alt fa-2x"></i>
                   <span className="nav-text">
               Map
                   </span>
-                </a>
+                </Link>
               </li>
-              <li className="has-subnav">
-                <a href="/about">
+              {/* <li className="has-subnav">
+                <Link to="/about">
                   <i className="fas fa-info-circle fa-2x"></i>
                   <span className="nav-text">
               About
                   </span>
-                </a>
-              </li>
+                </Link>
+              </li> */}
               <li onClick={this.handleLogout} className="has-subnav">
                 <a>
                   <i className="fas fa-power-off fa-2x"></i>
