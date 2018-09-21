@@ -33,23 +33,28 @@ class CatalogItem extends PureComponent {
     
     return (
       <section className={styles.catalogItem}>
-        <h3>Current Catalog</h3>
         {catalogItem.comic.characters &&
         <Fragment>
-          <button name="delete" onClick={() => removeCatalog(catalogItem)}>Remove</button>
-
+          <button name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-trash-alt fa-2x"></i></button>
           <img src={catalogItem.comic.image}/>
-          <p>Issue: {catalogItem.comic.issueName}</p>
-          <p>Cover Date: {catalogItem.comic.coverDate}</p>
-          <p>Volume: {catalogItem.comic.volumeName}</p>
-          {editing
-            ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
-            : <Fragment>
-              <p>Condition: {catalogItem.condition}</p>
-              <p>Status: {catalogItem.exchange}</p>
-              <button onClick={this.toggleEdit}>Edit</button>
-            </Fragment> 
-          }
+          <div className="user-settings">
+            <button onClick={this.toggleEdit}>Edit</button>
+              {editing
+                ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
+                : <Fragment>
+                    <h2>Condition:</h2>
+                    <p>{catalogItem.condition}</p>
+                    <h2>Status:</h2>
+                    <p>{catalogItem.exchange}</p>
+                  </Fragment> 
+              }
+          </div>
+          <h2>Issue:</h2>
+          <p>{catalogItem.comic.issueName}</p>
+          <h2>Cover Date:</h2>
+          <p>{catalogItem.comic.coverDate}</p>
+          <h2>Volume:</h2>
+          <p>{catalogItem.comic.volumeName}</p>
           <div dangerouslySetInnerHTML={{ __html: catalogItem.comic.description }}></div>
           
           Characters:
