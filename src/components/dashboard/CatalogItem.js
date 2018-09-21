@@ -32,10 +32,10 @@ class CatalogItem extends PureComponent {
     const { editing } = this.state;
     
     return (
-      <section className={styles.catalogItem}>
+      <section id="itemContainer" className={styles.catalogItem}>
         {catalogItem.comic.characters &&
         <Fragment>
-          <button name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-trash-alt fa-2x"></i></button>
+          <button id="deleteButton" name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-window-close fa-2x"></i></button>
           <img src={catalogItem.comic.image}/>
           <div className="user-settings">
             {editing
@@ -46,7 +46,7 @@ class CatalogItem extends PureComponent {
                 <p>{catalogItem.condition}</p>
                 <h2>Status:</h2>
                 <p>{catalogItem.exchange}</p>
-              </Fragment> 
+        </Fragment> 
             }
           </div>
           <h2>Issue:</h2>
