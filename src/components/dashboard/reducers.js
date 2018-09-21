@@ -1,6 +1,7 @@
 export const CATALOG_ADD = 'CATALOG_ADD';
 export const CATALOG_LOAD = 'CATALOG_LOAD';
 export const CATALOG_UPDATE = 'CATALOG_UPDATE';
+export const CATALOG_REMOVE = 'CATALOG_REMOVE';
 
 export const getCatalog = state => state.catalog;
 export const getUserCatalog = state => state.userCatalog;
@@ -22,6 +23,8 @@ export function userCatalog(state = [], { type, payload }) {
         if(catalog._id == payload._id) return { ...catalog, condition: payload.condition, exchange: payload.exchange };
         return catalog;
       });
+    case CATALOG_REMOVE:
+      return state.filter(catalog => catalog._id != payload);
     default:
       return state;
   }
