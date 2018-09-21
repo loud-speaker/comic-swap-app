@@ -13,7 +13,6 @@ import About from '../about/About';
 import ComicsList from '../comics/ComicsList';
 import Swap from '../swap/Swap';
 import Dashboard from '../dashboard/Dashboard';
-import Footer from './Footer';
 import MapResults from './MapResults';
 
 class App extends Component {

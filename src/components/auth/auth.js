@@ -22,6 +22,7 @@ class Auth extends PureComponent {
 
     return (
       <section className={styles.auth}>
+        <h2>Comic Swap connects you with fellow comic book collectors in your community. Create a list of comics you are willing to trade and comics you are looking for. Comic Swap will let you know about the comic shops in your area where you can meet up for trades.</h2>
         <Switch>
           <Route path="/auth/signin" render={() => (
             <div>
