@@ -3,6 +3,8 @@
   color: #FFF;
   background-color: #131313;
   padding: 0px;
+  width: 600px;
+  margin: 0 auto;
 
   * {
     margin: 0;

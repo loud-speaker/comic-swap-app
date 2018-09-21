@@ -49,7 +49,7 @@ render() {
             </a>      
           </li>
           <li className="has-subnav">
-            <a href="/dashboard">
+            <a href="/me">
               <i className="fas fa-boxes fa-2x"></i>
               <span className="nav-text">
               Dashboard

@@ -26,21 +26,6 @@ class Header extends Component {
       <div className={styles.header}>
       <h1>Comic Swap</h1>
       <Sidebar/>
-        <nav id="nav-ul">
-          {user &&
-            <Fragment>
-              <NavLink to="/">Comics&nbsp;</NavLink>
-              &nbsp;
-              <NavLink to="/" onClick={this.handleLogout}>Logout</NavLink>
-              &nbsp;
-              <NavLink to="/swap">Swap</NavLink>
-              &nbsp;
-              <NavLink to="/me">Dashboard</NavLink>
-            </Fragment>
-          }
-          &nbsp;
-          <NavLink to="/about">About</NavLink>
-        </nav>
       </div>
     );
   }
