@@ -58,14 +58,6 @@ class Sidebar extends PureComponent {
                   </span>
                 </Link>
               </li>
-              {/* <li className="has-subnav">
-                <Link to="/about">
-                  <i className="fas fa-info-circle fa-2x"></i>
-                  <span className="nav-text">
-              About
-                  </span>
-                </Link>
-              </li> */}
               <li onClick={this.handleLogout} className="has-subnav">
                 <a>
                   <i className="fas fa-power-off fa-2x"></i>
