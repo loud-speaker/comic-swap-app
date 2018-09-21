@@ -14,6 +14,7 @@ import ComicsList from '../comics/ComicsList';
 import Swap from '../swap/Swap';
 import Dashboard from '../dashboard/Dashboard';
 import Footer from './Footer';
+import MapResults from './MapResults';
 
 class App extends Component {
 
@@ -33,9 +34,9 @@ class App extends Component {
       <Router>
         <Fragment>
           <div className={styles.app}>  
-          <header>
-            <Header/>
-          </header>            
+            <header>
+              <Header/>
+            </header>            
 
             {checkedAuth &&
             <main>
@@ -45,6 +46,7 @@ class App extends Component {
                 <Route path="/auth" component={Auth}/>
                 <Route path="/swap" component={Swap}/>
                 <Route path="/me" component={Dashboard}/>
+                <Route path="/map" component={MapResults}/>
                 <Redirect to="/"/>
               </Switch>
             </main>

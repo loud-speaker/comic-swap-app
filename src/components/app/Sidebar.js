@@ -45,6 +45,14 @@ class Sidebar extends PureComponent {
               </a>      
             </li>
             <li className="has-subnav">
+              <a href="/map">
+                <i className="fas fa-map-marker-alt fa-2x"></i>
+                <span className="nav-text">
+              Map
+                </span>
+              </a>
+            </li>
+            <li className="has-subnav">
               <a href="/about">
                 <i className="fas fa-info-circle fa-2x"></i>
                 <span className="nav-text">
