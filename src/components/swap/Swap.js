@@ -19,15 +19,14 @@ class Swap extends Component {
       <section className={styles.swap}>
         {user &&
         <Fragment>
-          <h3>Swap Component</h3>
-
           <article>
-            <h3>{user.username}&apos;s Matches</h3>
+            <h2>{user.username}&apos;s Matches</h2>
             <img src={user.avatar}/>
           </article>
 
           <article>
-            Matches
+            <h1>Let's Swap!</h1>
+            <h2>These collectors have comics on your wishlist:</h2>
             <Matches/>
           </article>
         </Fragment>
