@@ -39,11 +39,14 @@ class Credentials extends PureComponent {
 
         <FormControl>
           <label className="emailLabel">Email:</label>
+        </FormControl>
+        <FormControl>
           <input className="emailForm" name="email" type="email" value={email} onChange={this.handleChange} required></input>
         </FormControl>
-
         <FormControl>
           <label className="passLabel">Password:</label>
+        </FormControl>
+        <FormControl>
           <input className="passForm" name="password" type="password" value={password} onChange={this.handleChange} required></input>
         </FormControl>
 
@@ -54,7 +57,7 @@ class Credentials extends PureComponent {
             <FormControl label="Zip Code">
               <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
             </FormControl>
-            <FormControl label="Username">
+            <FormControl label="Display Name">
               <input name="username" type="text" value={username} onChange={this.handleChange} required></input>
             </FormControl>
             <label>Pick An Avatar:</label>

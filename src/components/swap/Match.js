@@ -2,32 +2,37 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
+import zipcodes from 'zipcodes';
 
 class Match extends Component {
 
   static propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object,
+    user: PropTypes.object,
   };
   
   render() { 
-    const { match } = this.props;
+    const { match, user } = this.props;
+    const userZipData = zipcodes.lookup(match.user.zip);
 
     return (
       <section>
-        <h1>Match!</h1>
         <article>
           <div className="userAvatar">
             <img src={match.user.avatar}/>
           </div>
           <h2>User:</h2>
           <p>{match.user.username}</p>
-          <h2>Email:</h2>
-          <p>{match.user.email}</p>
+          <a href={'mailto:' + user.email + '?subject=Comic-Swap Trade offer:' + ' ' + match.comic.issueName}><button>Email User</button></a>
           <h2>Zip:</h2>
           <p>{match.user.zip}</p>
         </article>
 
-    
+        <div>
+          <h2 style={{ textAlign: 'center' }}>{match.user.username} is located in {userZipData.city}, {userZipData.state}</h2>
+          <iframe width="267" height="200" frameBorder="0" style={{ border: 0 }} src={'https://www.google.com/maps/embed/v1/search?q=comic%20book%20store%20near%20' + user.zip + '&key=AIzaSyBHViEFI_2ar58Eh4MNJFf-DJwUg2GaJfg'} allowFullScreen></iframe>
+        </div>
+        
         <div className="comicCover">
           <img src={match.comic.image}/>
         </div>
