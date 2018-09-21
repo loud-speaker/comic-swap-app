@@ -1,6 +1,31 @@
-:local(.searchForm) {
- 
-background-color: black;
+:local(.SearchForm) {
 
+  background-color: white;
+ 
+  input, select, textarea {
+    font-family : inherit;
+    font-size   : 100%;
+  }
+
+  label {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  #keywordInput {
+    width: 600px;
+    height: 40px;
+    margin-top: 6px; 
+  }
+
+  .searchBtn {
+    width: 600px;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  
 
 }

@@ -37,12 +37,14 @@ class Credentials extends PureComponent {
     return (
       <form onSubmit={this.handleSubmit} className={styles.credentials}>
 
-        <FormControl label="Email">
-          <input name="email" type="email" value={email} onChange={this.handleChange} required></input>
+        <FormControl>
+          <label className="emailLabel">Email:</label>
+          <input className="emailForm" name="email" type="email" value={email} onChange={this.handleChange} required></input>
         </FormControl>
 
-        <FormControl label="Password">
-          <input name="password" type="password" value={password} onChange={this.handleChange} required></input>
+        <FormControl>
+          <label className="passLabel">Password:</label>
+          <input className="passForm" name="password" type="password" value={password} onChange={this.handleChange} required></input>
         </FormControl>
 
         {(action === 'Sign Up') &&
