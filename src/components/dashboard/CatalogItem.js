@@ -59,13 +59,13 @@ class CatalogItem extends PureComponent {
           <p>{catalogItem.comic.volumeName}</p>
           <div dangerouslySetInnerHTML={{ __html: catalogItem.comic.description }}></div>
           
-          Characters:
+          <h2>Characters:</h2>
           <ul>
             {catalogItem.comic.characters.map((character, i) => 
               <li key={i}>{character}</li>  
             )}
           </ul>
-          Credits:
+          <h2>Credits:</h2>
           <ul>
             {catalogItem.comic.personCredits.map(person => 
               <li key={person._id}>{person.name} ({person.role})</li>  
