@@ -24,7 +24,7 @@ export function userCatalog(state = [], { type, payload }) {
         return catalog;
       });
     case CATALOG_REMOVE:
-      return state.filter(catalog => catalog._id != payload);
+      return state.filter(catalog => catalog._id != payload._id);
     default:
       return state;
   }
