@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
 import zipcodes from 'zipcodes';
+import styles from './Match.css';
 
 class Match extends Component {
 
@@ -16,7 +17,7 @@ class Match extends Component {
     const userZipData = zipcodes.lookup(match.user.zip);
 
     return (
-      <section>
+      <section className={styles.Match}>
         <article>
           <div className="userAvatar">
             <img src={match.user.avatar}/>
@@ -24,8 +25,6 @@ class Match extends Component {
           <h2>User:</h2>
           <p>{match.user.username}</p>
           <a href={'mailto:' + user.email + '?subject=Comic-Swap Trade offer:' + ' ' + match.comic.issueName}><button>Email User</button></a>
-          <h2>Zip:</h2>
-          <p>{match.user.zip}</p>
         </article>
 
         <div>

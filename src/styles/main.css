@@ -27,7 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0px;
   color: black;
-  background-color: #ebebeb; 
+  background-color: white; 
 }
 
 .devonly {
@@ -42,7 +42,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     margin: 0px;
     color: black;
-    background-color: #ebebeb; 
+    background-color: white; 
   }
 
   h1 {
