@@ -3,13 +3,12 @@
   @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers');
   
   body {
-    background-color: #ebebeb;
-    
+    background-color: #ebebeb; 
   }
   .catalog-header {
     display: flex;
     flex-direction: row;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     background-color: white;
     border: 10px solid black;
   }

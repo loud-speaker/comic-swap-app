@@ -36,12 +36,14 @@ class CatalogItem extends PureComponent {
         {catalogItem.comic.characters &&
         <Fragment>
           <button id="deleteButton" name="delete" onClick={() => removeCatalog(catalogItem)}><i className="fas fa-window-close fa-2x"></i></button>
-          <img src={catalogItem.comic.image}/>
+          <div className="comicCover">
+            <img src={catalogItem.comic.image}/>
+          </div>
           <div className="user-settings">
             {editing
               ? <CatalogItemForm submit={this.handleUpdate} onCancel={this.toggleEdit} catalogItem={catalogItem}/>
               : <Fragment>
-                <button onClick={this.toggleEdit}>Edit Comic</button>
+                <button id="editButton" onClick={this.toggleEdit}>Edit Comic</button>
                 <h2>Condition:</h2>
                 <h3>{catalogItem.condition}</h3>
                 <h2>Status:</h2>

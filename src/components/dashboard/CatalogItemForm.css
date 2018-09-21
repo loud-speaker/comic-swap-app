@@ -18,4 +18,9 @@
             border: 1px solid black;
         } 
     }
+
+    .condition {
+        display: flex;
+        flex-direction: row;
+    }
 }

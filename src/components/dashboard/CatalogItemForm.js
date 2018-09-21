@@ -43,22 +43,24 @@ export default class CatalogItemForm extends PureComponent {
     render() {
 
       return (
-        <form onSubmit={this.handleSubmit} className={styles.catalogItemForm}>
-          <input onChange={this.handleChange} id="good" type="radio" name="condition" value="Good" className="input-hidden"></input>
-          <label htmlFor="good">
-            <img src={good} className="condition" alt="Condition: Good"/>
-          </label>
+          <form onSubmit={this.handleSubmit} className={styles.catalogItemForm}>
+             <div className="condition">
+              <input onChange={this.handleChange} id="good" type="radio" name="condition" value="Good" className="input-hidden"></input>
+              <label htmlFor="good">
+              <img src={good} className="condition" alt="Condition: Good"/>
+              </label>
 
-          <input onChange={this.handleChange} id="fine" type="radio" name="condition" value="Fine" className="input-hidden"></input>
-          <label htmlFor="fine">
-            <img src={fine} className="condition" alt="Condition: Fine"/>
-          </label>
+              <input onChange={this.handleChange} id="fine" type="radio" name="condition" value="Fine" className="input-hidden"></input>
+              <label htmlFor="fine">
+              <img src={fine} className="condition" alt="Condition: Fine"/>
+              </label>
 
-          <input onChange={this.handleChange} id="mint" type="radio" name="condition" value="Mint" className="input-hidden"></input>
-          <label htmlFor="mint">
-            <img src={mint} className="condition" alt="Condition: Mint"/>
-          </label>
-
+              <input onChange={this.handleChange} id="mint" type="radio" name="condition" value="Mint" className="input-hidden"></input>
+              <label htmlFor="mint">
+              <img src={mint} className="condition" alt="Condition: Mint"/>
+              </label>
+            </div>
+          
           <input onChange={this.handleChange} id="own" type="radio" name="exchange" value="Own" className="input-hidden"></input>
           <label htmlFor="own">
             <img src={own} className="exchange" alt="Exchange Status: Own"/>
