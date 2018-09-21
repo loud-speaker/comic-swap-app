@@ -5,6 +5,7 @@ import { error, loading } from '../components/app/reducers';
 import { user, checkedAuth } from '../components/auth/reducers';
 import { comics, comic } from '../components/comics/reducers';
 import { userCatalog } from '../components/dashboard/reducers';
+import { matches } from '../components/swap/reducers';
 
 const combined = combineReducers({
   error,
@@ -13,7 +14,8 @@ const combined = combineReducers({
   checkedAuth,
   comics,
   comic,
-  userCatalog
+  userCatalog,
+  matches
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
