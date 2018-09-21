@@ -32,7 +32,7 @@ class Credentials extends PureComponent {
   
   render() { 
     const { action } = this.props;
-    const { email, password, zip, username, avatar } = this.state;
+    const { email, password, zip, username } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit} className={styles.credentials}>
@@ -93,10 +93,7 @@ class Credentials extends PureComponent {
             <input onChange={this.handleChange} id="avatar9" type="radio" name="avatar" value={avatar9} className="input-hidden"></input>
             <label htmlFor="avatar9">
               <img src={avatar9} className="avatar" alt="Avatar"/>
-            </label>
-
-            <input name="avatar" type="text" value={avatar} onChange={this.handleChange} required></input>
-          
+            </label>          
 
             <FormControl label="Zip Code">
               <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>

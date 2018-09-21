@@ -29,7 +29,6 @@ class CatalogDisplay extends PureComponent {
           />)}
       </Fragment>
         }
-        <p>Comic data courtesy of <a href="https://comicvine.gamespot.com/">Comic Vine</a></p>
       </section>
     );
   }

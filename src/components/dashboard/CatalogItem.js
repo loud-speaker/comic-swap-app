@@ -48,7 +48,7 @@ class CatalogItem extends PureComponent {
                 <h3>{catalogItem.condition}</h3>
                 <h2>Status:</h2>
                 <h3>{catalogItem.exchange}</h3>
-        </Fragment> 
+              </Fragment> 
             }
           </div>
           <h2>Issue:</h2>
