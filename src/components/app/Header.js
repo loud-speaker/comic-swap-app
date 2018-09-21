@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
 import { logout } from '../auth/actions';
 import PropTypes from 'prop-types';
+import Sidebar from './Sidebar';
 
 import styles from './Header.css';
 
@@ -24,6 +25,7 @@ class Header extends Component {
     return (
       <div className={styles.header}>
       <h1>Comic Swap</h1>
+      <Sidebar/>
         <nav id="nav-ul">
           {user &&
             <Fragment>
