@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './CatalogItem.css';
 import CatalogItemForm from './CatalogItemForm';
-import { updateCatalog } from './actions';
+import { updateCatalog, removeCatalog } from './actions';
 import { connect } from 'react-redux';
 
 class CatalogItem extends PureComponent {
@@ -10,6 +10,7 @@ class CatalogItem extends PureComponent {
   static propTypes = {
     catalogItem: PropTypes.object,
     updateCatalog: PropTypes.func,
+    removeCatalog: PropTypes.func
   };
   
   state = {
@@ -27,7 +28,7 @@ class CatalogItem extends PureComponent {
   };
   
   render() { 
-    const { catalogItem } = this.props;
+    const { catalogItem, removeCatalog } = this.props;
     const { editing } = this.state;
     
     return (
@@ -35,6 +36,8 @@ class CatalogItem extends PureComponent {
         <h3>Current Catalog</h3>
         {catalogItem.comic.characters &&
         <Fragment>
+          <button name="delete" onClick={() => removeCatalog(catalogItem)}>Remove</button>
+
           <img src={catalogItem.comic.image}/>
           <p>Issue: {catalogItem.comic.issueName}</p>
           <p>Cover Date: {catalogItem.comic.coverDate}</p>
@@ -70,5 +73,5 @@ class CatalogItem extends PureComponent {
  
 export default connect(
   null,
-  { updateCatalog }
+  { updateCatalog, removeCatalog }
 )(CatalogItem);
