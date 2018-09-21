@@ -21,7 +21,6 @@ class Swap extends Component {
   
   render() { 
     const { user } = this.props;
-    console.log('USER', user);
 
     return (
       <section className={styles.swap}>
