@@ -36,6 +36,7 @@ class Credentials extends PureComponent {
 
     return (
       <form onSubmit={this.handleSubmit} className={styles.credentials}>
+
         <FormControl label="Email">
           <input name="email" type="email" value={email} onChange={this.handleChange} required></input>
         </FormControl>
@@ -45,7 +46,9 @@ class Credentials extends PureComponent {
         </FormControl>
 
         {(action === 'Sign Up') &&
-          <Fragment>
+          
+        <Fragment>
+           <div className="signUpForm2">
             <FormControl label="Zip Code">
               <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
             </FormControl>
@@ -100,10 +103,7 @@ class Credentials extends PureComponent {
                 <img src={avatar9} className="avatar" alt="Avatar"/>
               </label>
             </div>
-
-            {/* <input name="avatar" type="text" value={avatar} onChange={this.handleChange} required></input> */}
-          
-
+           </div>
           </Fragment>
         }
 
@@ -111,6 +111,7 @@ class Credentials extends PureComponent {
           <button>{action}</button>
         </FormControl>
       </form>
+
     );
   }
 }
