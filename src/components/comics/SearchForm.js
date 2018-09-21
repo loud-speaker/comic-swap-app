@@ -30,14 +30,14 @@ export default class SearchForm extends PureComponent {
         <form onSubmit={event => this.handleSubmit(event)}>
           <div>
             <label className="searchFormLabel">Keyword Search:</label>
-              <input id="keywordInput"
-                type="text"
-                label="Keyword Search"
-                name="keyword"
-                value={keyword}
-                onChange={this.handleChange}
-                placeholder="Search for keyword"
-              />
+            <input id="keywordInput"
+              type="text"
+              label="Keyword Search"
+              name="keyword"
+              value={keyword}
+              onChange={this.handleChange}
+              placeholder="Search for keyword"
+            />
           </div>
           <div>
             <label className="searchFormLabel">
@@ -84,9 +84,9 @@ export default class SearchForm extends PureComponent {
               />
             </label>
           </div>  
-            <button className="searchBtn" type="submit">Search</button> 
-          </form>
-        </div>
+          <button className="searchBtn" type="submit">Search</button> 
+        </form>
+      </div>
     );
   }
 }

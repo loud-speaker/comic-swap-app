@@ -9,7 +9,7 @@ class Footer extends Component {
     return (
       <footer className={styles.footer}>
         <div className="halftone">
-        <img src={mint} className="condition" alt="Condition: Mint"/>
+          <img src={mint} className="condition" alt="Condition: Mint"/>
         </div>
       </footer>
     );

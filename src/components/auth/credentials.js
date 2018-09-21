@@ -50,7 +50,7 @@ class Credentials extends PureComponent {
         {(action === 'Sign Up') &&
           
         <Fragment>
-           <div className="signUpForm2">
+          <div className="signUpForm2">
             <FormControl label="Zip Code">
               <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
             </FormControl>
@@ -73,22 +73,22 @@ class Credentials extends PureComponent {
               <label htmlFor="avatar3">
                 <img src={avatar3} className="avatar" alt="Avatar"/>
               </label>
-            <div className="pickAvatar2">
-              <input onChange={this.handleChange} id="avatar4" type="radio" name="avatar" value={avatar4} className="input-hidden"></input>
-              <label htmlFor="avatar4">
-                <img src={avatar4} className="avatar" alt="Avatar"/>
-              </label>
+              <div className="pickAvatar2">
+                <input onChange={this.handleChange} id="avatar4" type="radio" name="avatar" value={avatar4} className="input-hidden"></input>
+                <label htmlFor="avatar4">
+                  <img src={avatar4} className="avatar" alt="Avatar"/>
+                </label>
 
-              <input onChange={this.handleChange} id="avatar5" type="radio" name="avatar" value={avatar5} className="input-hidden"></input>
-              <label htmlFor="avatar5">
-                <img src={avatar5} className="avatar" alt="Avatar"/>
-              </label>
+                <input onChange={this.handleChange} id="avatar5" type="radio" name="avatar" value={avatar5} className="input-hidden"></input>
+                <label htmlFor="avatar5">
+                  <img src={avatar5} className="avatar" alt="Avatar"/>
+                </label>
 
-              <input onChange={this.handleChange} id="avatar6" type="radio" name="avatar" value={avatar6} className="input-hidden"></input>
-              <label htmlFor="avatar6">
-                <img src={avatar6} className="avatar" alt="Avatar"/>
-              </label>
-            </div>
+                <input onChange={this.handleChange} id="avatar6" type="radio" name="avatar" value={avatar6} className="input-hidden"></input>
+                <label htmlFor="avatar6">
+                  <img src={avatar6} className="avatar" alt="Avatar"/>
+                </label>
+              </div>
 
               <input onChange={this.handleChange} id="avatar7" type="radio" name="avatar" value={avatar7} className="input-hidden"></input>
               <label htmlFor="avatar7">
@@ -105,8 +105,8 @@ class Credentials extends PureComponent {
                 <img src={avatar9} className="avatar" alt="Avatar"/>
               </label>
             </div>
-           </div>
-          </Fragment>
+          </div>
+        </Fragment>
         }
 
         <FormControl>
