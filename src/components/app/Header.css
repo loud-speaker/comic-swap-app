@@ -5,9 +5,12 @@
   justify-content: center;
   width: 600px;
   margin: 0 auto;
+  max-height: 200px;
 
   h1 {
     font-family: 'Bangers', sans-serif;
+    font-size: 100px;
+    -webkit-text-stroke: .2px black;
     padding: 0;
     text-shadow: 0 1px 0 #ccc, 
     0 2px 0 #c9c9c9,

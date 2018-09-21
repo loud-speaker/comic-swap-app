@@ -51,10 +51,6 @@ class App extends Component {
               </Switch>
             </main>
             }
-
-            <footer>
-              <Footer/>
-            </footer>
           </div>
         </Fragment>
       </Router>

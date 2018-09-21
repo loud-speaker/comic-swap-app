@@ -18,8 +18,7 @@ class Dashboard extends PureComponent {
       <section className={styles.dashboard}>
         <div className="catalog-header">
           <img className="img" src={user.avatar}/>
-          <h2 className="name"></h2>
-          <h2 className="welcome">{user.username} Welcome To Your Comic Collection!</h2>
+          <h2 className="welcome">{user.username} <br></br>Welcome To Your Comic Collection!</h2>
         </div>
         <div className="catalog-display">
           <CatalogDisplay/>

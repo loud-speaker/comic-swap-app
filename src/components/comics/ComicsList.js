@@ -20,12 +20,12 @@ class ComicsList extends PureComponent {
   render() {
     const { comics } = this.props;
     return (
-      <div>
-        <SearchForm submit={this.handleSearch}/>
+      <div id="comicSearch">
         {comics.length > 0
           ? <ComicsDisplay comics={comics}/>
-          : <p>Search for comics!</p>
+          : <h2>Search For Comics:</h2>
         }
+        <SearchForm submit={this.handleSearch}/>
       </div>
     );
   }
