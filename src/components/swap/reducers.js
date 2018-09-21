@@ -1,6 +1,6 @@
 export const MATCH_LOAD = 'MATCH_LOAD';
 
-export const getMatches = state => state.matches;
+export const getUserMatches = state => state.matches;
 
 export function matches(state = [], { type, payload }) {
   switch(type) {

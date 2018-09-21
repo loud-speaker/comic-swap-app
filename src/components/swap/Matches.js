@@ -2,18 +2,21 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Match from './Match';
-import { getMatches } from './reducers';
-import { loadMatches } from './actions';
+import { getUser } from '../auth/reducers';
+import { getUserMatches } from './reducers';
+import { loadUserMatches } from './actions';
 
 class Matches extends Component {
 
   static propTypes = {
+    user: PropTypes.object,
+    loadUserMatches: PropTypes.func,
     matches: PropTypes.array,
-    loadMatches: PropTypes.func
   };
 
   componentDidMount() {
-    this.props.loadMatches();
+    const { user } = this.props;
+    this.props.loadUserMatches(user._id);
   }
   
   render() { 
@@ -21,8 +24,6 @@ class Matches extends Component {
 
     return (
       <section>
-        <h4>Matches</h4>
-        
         {matches &&
           <Fragment>
             {matches.map(match => (
@@ -40,7 +41,8 @@ class Matches extends Component {
  
 export default connect(
   state => ({
-    matches: getMatches(state)
+    user: getUser(state),
+    matches: getUserMatches(state)
   }),
-  { loadMatches }
+  { loadUserMatches }
 )(Matches);
