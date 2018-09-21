@@ -48,7 +48,6 @@ class CatalogItem extends PureComponent {
                     <p>{catalogItem.exchange}</p>
                   </Fragment> 
               }
-          
           </div>
           <h2>Issue:</h2>
           <p>{catalogItem.comic.issueName}</p>
