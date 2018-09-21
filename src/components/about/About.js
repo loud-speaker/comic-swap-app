@@ -6,8 +6,9 @@ class About extends Component {
 
     return (
       <section>
-        <h3>About Team Loud Speaker</h3>
-        <p>WE CAN DO IT!!!!!!</p>
+        <h3>About The Team</h3>
+        <p>Comic data courtesy of <a href="https://comicvine.gamespot.com/">Comic Vine</a></p>
+        <p>Avatar illustration by <a href="https://ddianahernandez.com//">Diana Hernandez</a></p>
       </section>
     );
   }

@@ -1,7 +1,5 @@
 :local(.comics) {
-  
-  body { 
-    background-color: #ebebeb;
-  }
+  width: 610px;
+  background-color: white;;
 
 }
