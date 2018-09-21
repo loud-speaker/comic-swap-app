@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CatalogDisplay from './CatalogDisplay';
 import { getUser } from '../auth/reducers';
+import styles from './Dashboard.css';
 
 class Dashboard extends PureComponent {
 
@@ -14,10 +15,15 @@ class Dashboard extends PureComponent {
     const { user } = this.props;
     
     return (
-      <section>
-        <h3>{user.username}&apos;s Collection</h3>
-        <img src={user.avatar}/>
-        <CatalogDisplay/>
+      <section className={styles.dashboard}>
+        <div className="catalog-header">
+          <img className="img" src={user.avatar}/>
+          <h2 className="name"></h2>
+          <h2 className="welcome">{user.username} Welcome To Your Comic Collection!</h2>
+        </div>
+        <div className="catalog-display">
+          <CatalogDisplay/>
+        </div>
       </section>
     );
   }
