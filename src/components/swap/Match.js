@@ -45,9 +45,9 @@ class Match extends Component {
           <h2>Cover Date:</h2>
           <p>{match.comic.coverDate}</p>
           <h2>Condition:</h2>
-          <h3>{match.comic.condition}</h3>
+          <h3>{match.condition}</h3>
           <h2>Status:</h2>
-          <h3>{match.comic.exchange}</h3>
+          <h3>{match.exchange}</h3>
         </Fragment>
         }
       </section>
