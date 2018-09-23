@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import FormControl from '../shared/FormControl';
 import { avatar1, avatar2, avatar3, avatar4, avatar5 } from '../../assets/constants'; 
 import { avatar6, avatar7, avatar8, avatar9 } from '../../assets/constants';
-import styles from './credentials.css';
+import styles from './Credentials.css';
 
 class Credentials extends PureComponent {
 
   static propTypes = {
     submit: PropTypes.func.isRequired,
     action: PropTypes.string.isRequired,
+    error: PropTypes.any,
+    clearError: PropTypes.func,
   };
 
   state = {
@@ -55,7 +57,7 @@ class Credentials extends PureComponent {
         <Fragment>
           <div className="signUpForm2">
             <FormControl label="Zip Code">
-              <input name="zip" type="number" pattern="(\d{5}([\-]\d{4})?)" value={zip} onChange={this.handleChange} required></input>
+              <input name="zip" type="number" value={zip} onChange={this.handleChange}></input>
             </FormControl>
             <FormControl label="Display Name">
               <input name="username" type="text" value={username} onChange={this.handleChange} required></input>

@@ -2,18 +2,19 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import PrivateRoute from './PrivateRoute';
-import Auth from '../auth/auth';
-import styles from './App.css';
 import { tryLoadUser } from '../auth/actions';
 import { getCheckedAuth } from '../auth/reducers';
+import styles from './App.css';
 
-import Header from './Header';
 import About from '../about/About';
+import Auth from '../auth/auth';
 import ComicsList from '../comics/ComicsList';
-import Swap from '../swap/Swap';
 import Dashboard from '../dashboard/Dashboard';
+import Footer from './Footer';
+import Header from './Header';
 import MapResults from './MapResults';
+import PrivateRoute from './PrivateRoute';
+import Swap from '../swap/Swap';
 
 class App extends Component {
 
@@ -49,7 +50,11 @@ class App extends Component {
                 <Redirect to="/"/>
               </Switch>
             </main>
+
             }
+            <footer>
+              <Footer/>
+            </footer>
           </div>
         </Fragment>
       </Router>

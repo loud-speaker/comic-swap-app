@@ -17,7 +17,7 @@ class ComicResult extends PureComponent {
     comicId = comic.comicId;
     return loadOneComic(comicId)
       .then(data => {
-        data.payload.user = user._id;
+        data.payload.user = user.id;
         addComic(data.payload);
       });
   };

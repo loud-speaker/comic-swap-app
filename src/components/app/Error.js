@@ -26,8 +26,10 @@ class Error extends Component {
     const { error } = this.props;
     if(!error) return null;
 
+    const message = error.error || error.message || error;
+
     return (
-      <pre>{error}</pre>
+      <p style={{ color: 'red' }}>{message}</p>
     );
   }
 }

@@ -16,7 +16,7 @@ class Matches extends Component {
 
   componentDidMount() {
     const { user } = this.props;
-    this.props.loadUserMatches(user._id);
+    this.props.loadUserMatches(user.id);
   }
   
   render() { 

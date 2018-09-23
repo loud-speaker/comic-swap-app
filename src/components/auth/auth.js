@@ -4,8 +4,8 @@ import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signin, signup } from './actions';
 import { getUser } from './reducers';
-import Credentials from './credentials';
-import styles from './auth.css';
+import Credentials from './Credentials';
+import Error from '../app/Error';
 
 class Auth extends PureComponent {
 
@@ -21,8 +21,9 @@ class Auth extends PureComponent {
     if(user) return <Redirect to={redirect}/>;
 
     return (
-      <section className={styles.auth}>
+      <section>
         <h2>Comic Swap connects you with fellow comic book collectors in your community. Create a list of comics you are willing to trade and comics you are looking for. Comic Swap will let you know about the comic shops in your area where you can meet up for trades.</h2>
+        <Error/>
         <Switch>
           <Route path="/auth/signin" render={() => (
             <div>
