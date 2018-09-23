@@ -25,7 +25,7 @@ class Swap extends Component {
           </article>
 
           <article>
-            <h1>Let's Swap!</h1>
+            <h1>Let&apos;s Swap!</h1>
             <h2>These collectors have comics on your wishlist:</h2>
             <Matches/>
           </article>
